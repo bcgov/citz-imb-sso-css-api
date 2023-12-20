@@ -16,6 +16,8 @@
 3. For use with [@bcgov/citz-imb-kc-express].
 4. Allows easy use of the [BCGov Keycloak CSS SSO API] in a nodejs application.
 
+**What is this package for?** - [Click Here](#use-this-package-to:)
+
 </details>
 
 ---
