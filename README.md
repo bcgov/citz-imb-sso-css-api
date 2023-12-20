@@ -67,7 +67,7 @@
 
 3. Run `npm install` to add the package.
 
-[Return to Top](#bcgov-css-sso-api-integration-as-addon-to-citz_imb_kc_express-package)
+[Return to Top](#bcgov-css-sso-api-integration-as-addon-to-citz-imb-kc-express-package)
 
 <br />
 
@@ -83,7 +83,7 @@
 
 2. Add the required environment variables from the [Environment Variables](#environment-variables) section below.
 
-[Return to Top](#bcgov-css-sso-api-integration-as-addon-to-citz_imb_kc_express-package)
+[Return to Top](#bcgov-css-sso-api-integration-as-addon-to-citz-imb-kc-express-package)
 
 <br />
 
@@ -103,7 +103,7 @@ CSS_API_URL= # (optional) CSS API url, see default value below.
 # https://api.loginproxy.gov.bc.ca/api/v1
 ```
 
-[Return to Top](#bcgov-css-sso-api-integration-as-addon-to-citz_imb_kc_express-package)
+[Return to Top](#bcgov-css-sso-api-integration-as-addon-to-citz-imb-kc-express-package)
 
 <br />
 
@@ -123,7 +123,7 @@ import {
 
 ```
 
-[Return to Top](#bcgov-css-sso-api-integration-as-addon-to-citz_imb_kc_express-package)
+[Return to Top](#bcgov-css-sso-api-integration-as-addon-to-citz-imb-kc-express-package)
 
 <br />
 
@@ -135,7 +135,7 @@ These are the TypeScript types of the `@bcgov/citz-imb-kc-css-api` module.
 
 ```
 
-[Return to Top](#bcgov-css-sso-api-integration-as-addon-to-citz_imb_kc_express-package)
+[Return to Top](#bcgov-css-sso-api-integration-as-addon-to-citz-imb-kc-express-package)
 
 <br />
 
@@ -147,7 +147,7 @@ None atm.
 
 <!-- TBD: [SET](https://github.com/bcgov/citz-imb-salary-estimate-tool) - Salary Estimation Tool -->
 
-[Return to Top](#bcgov-sso-keycloak-integration-for-express)
+[Return to Top](#bcgov-css-sso-api-integration-as-addon-to-citz-imb-kc-express-package)
 
 <!-- Link References -->
 
