@@ -38,6 +38,12 @@
 - For use with [@bcgov/citz-imb-kc-express]
 - Allows for easy use of [BCGov Keycloak CSS SSO API] in a nodejs application.
 
+### Use this package to:
+
+- Check, add, or remove roles from a Keycloak user in your Keycloak Integration.
+- Add, update, read, or remove roles from your Keycloak Integration.
+- Get a list of users in your Keycloak Integration based on a query.
+
 ---
 
 <br />
