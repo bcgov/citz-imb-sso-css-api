@@ -13,7 +13,7 @@
 
 1. Install package by following the steps at [Installing the Package](#installing-the-package).
 2. Set up the package by following the steps at [Basic Setup Guide](#basic-setup-guide).
-3. For use with [@bcgov/citz-imb-kc-express].
+3. Use with [@bcgov/citz-imb-kc-express] or standalone.
 4. Allows easy use of the [BCGov Keycloak CSS SSO API] in a nodejs application.
 
 **What is this package for?** - [Checkout General Information](#general-information)
@@ -28,7 +28,7 @@
 - [Installing the Package](#installing-the-package) - **Start Here!**
 - [Basic Setup Guide](#basic-setup-guide) - Setting up after installing.
 - [Environment Variables](#environment-variables) - Required variables for initialization.
-- [Module Exports](#module-exports) - Functions and Types available from the module.
+- [Module Exports](#module-exports) - Functions available from the module.
 - [TypeScript Types](#typescript-types) - Available TypeScript types.
 - [Applications using this Solution](#applications-using-this-solution) - See an example of how to use.
 
@@ -37,7 +37,7 @@
 - For running on a NodeJS:20 API.
 - For Keycloak Gold Standard.
 - Works with Vanilla JavaScript or Typescript 5.
-- For use with [@bcgov/citz-imb-kc-express]
+- Use with [@bcgov/citz-imb-kc-express] or standalone.
 - Allows for easy use of [BCGov Keycloak CSS SSO API] in a nodejs application.
 
 ### Use this package to:
@@ -75,15 +75,9 @@
 
 ## Basic Setup Guide
 
-1. TBD.
+1. Add the required environment variables from the [Environment Variables](#environment-variables) section below.
 
-*Example:*
-
-```JavaScript
-
-```
-
-2. Add the required environment variables from the [Environment Variables](#environment-variables) section below.
+2. Start using the functions provided as shown in [Module Exports](#module-exports).
 
 [Return to Top](#bcgov-css-sso-api-integration-as-addon-to-citz-imb-kc-express-package)
 
@@ -96,7 +90,9 @@
 
 CSS_API_CLIENT_ID= # Keycloak CSS API Service Account client_id
 CSS_API_CLIENT_SECRET= # Keycloak CSS API Service Account client_secret
+
 SSO_INTEGRATION_ID= # Keycloak integration id (dont include leading zeros)
+SSO_ENVIRONMENT= # 'dev', 'test' or 'prod'. Default is 'dev'.
 
 DEBUG= # (optional) Set to 'true' to get useful debug statements in api console.
 CSS_API_TOKEN_URL= # (optional) CSS Token url, see default value below.
@@ -115,12 +111,26 @@ These are the functions and types exported by the `@bcgov/citz-imb-kc-css-api` m
 
 ```JavaScript
 import {
-  
-} from '@bcgov/citz-imb-kc-css-api';
-
-// TypeScript Types:
-import {
-  
+  getRoles, // Get all roles from integration
+  createRole, // Create a new role
+  getRole, // Get role details
+  updateRole, // Update a role name
+  deleteRole, // Remove a role
+  getRoleComposites, // Get a role's composites
+  addRoleComposite, // Add a composite to a role
+  getRoleComposite, // Get a composite role from a role
+  deleteRoleComposite, // Remove a composite role from a role
+  getUserRoles, // Get roles associated with a user
+  assignUserRole, // Assign a role to a user
+  getUsersWithRole, // Get users associated with a role
+  unassignUserRole, // Unassign a role from a user
+  getIDIRUsers, // Get list of IDIR users by query
+  getAzureIDIRUsers, // Get list of Azure IDIR users by query
+  getGitHubBCGovUsers, // Get list of GitHub BCGov users by query
+  getGitHubPublicUsers, // Get list of GitHub Public users by query
+  getBasicBCeIDUser, // Get Basic BCeID user by guid
+  getBusinessBCeIDUser, // Get Business BCeID user by guid
+  getBothBCeIDUser, // Get Basic or Business BCeID user by guid
 } from '@bcgov/citz-imb-kc-css-api';
 
 ```
@@ -134,7 +144,56 @@ import {
 These are the TypeScript types of the `@bcgov/citz-imb-kc-css-api` module.
 
 ```TypeScript
+// Roles
+const getRoles: () => Promise<any>;
+const createRole: (roleName: string) => Promise<any>;
+const getRole: (roleName: string) => Promise<any>;
+const updateRole: (roleName: string, newRoleName: string) => Promise<any>;
+const deleteRole: (roleName: string) => Promise<any>;
+const getRoleComposites: (roleName: string) => Promise<any>;
+const addRoleComposite: (roleName: string, newCompositeRole: string) => Promise<any>;
+const getRoleComposite: (roleName: string, compositeRoleName: string) => Promise<any>;
+const deleteRoleComposite: (roleName: string, compositeRoleName: string) => Promise<any>;
 
+// Role-Mapping
+const getUserRoles: (username: string) => Promise<any>;
+const assignUserRole: (username: string, roleName: string) => Promise<any>;
+const getUsersWithRole: (roleName: string) => Promise<any>;
+const unassignUserRole: (username: string, roleName: string) => Promise<any>;
+
+// Users
+const getIDIRUsers: (query?: IDIRUserQuery) => Promise<any>;
+const getAzureIDIRUsers: (query?: IDIRUserQuery) => Promise<any>;
+const getGitHubBCGovUsers: (query?: GitHubUserQuery) => Promise<any>;
+const getGitHubPublicUsers: (query?: GitHubUserQuery) => Promise<any>;
+const getBasicBCeIDUser: (guid: string) => Promise<any>;
+const getBusinessBCeIDUser: (guid: string) => Promise<any>;
+const getBothBCeIDUser: (guid: string) => Promise<any>;
+
+type RequestParams = {
+  integrationEndpoint: boolean;
+  endpoint: string;
+  method?: "GET" | "POST" | "PUT" | "DELETE";
+  body?: RequestBody;
+};
+
+type RequestBody = {
+  name: string;
+};
+
+type IDIRUserQuery = {
+  firstName?: string;
+  lastName?: string;
+  email?: string;
+  guid?: string;
+};
+
+type GitHubUserQuery = {
+  name?: string;
+  login?: string; // Username
+  email?: string;
+  guid?: string;
+};
 ```
 
 [Return to Top](#bcgov-css-sso-api-integration-as-addon-to-citz-imb-kc-express-package)
