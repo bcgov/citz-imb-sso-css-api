@@ -4,7 +4,6 @@ const {
   CSS_API_CLIENT_SECRET = "",
   SSO_INTEGRATION_ID = "",
   DEBUG = "false",
-  CSS_API_TOKEN_URL = "https://loginproxy.gov.bc.ca/auth/realms/standard/protocol/openid-connect/token",
   CSS_API_URL = "https://api.loginproxy.gov.bc.ca/api/v1",
 } = process.env;
 
@@ -15,6 +14,5 @@ export default {
   CSS_API_CLIENT_ID,
   CSS_API_CLIENT_SECRET,
   SSO_INTEGRATION_ID,
-  CSS_API_TOKEN_URL,
   CSS_API_URL,
 };

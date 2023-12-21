@@ -95,8 +95,6 @@ SSO_INTEGRATION_ID= # Keycloak integration id (dont include leading zeros)
 SSO_ENVIRONMENT= # 'dev', 'test' or 'prod'. Default is 'dev'.
 
 DEBUG= # (optional) Set to 'true' to get useful debug statements in api console.
-CSS_API_TOKEN_URL= # (optional) CSS Token url, see default value below.
-# https://loginproxy.gov.bc.ca/auth/realms/standard/protocol/openid-connect/token
 CSS_API_URL= # (optional) CSS API url, see default value below.
 # https://api.loginproxy.gov.bc.ca/api/v1
 ```
