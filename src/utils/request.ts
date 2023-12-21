@@ -15,8 +15,7 @@ export const request = async (params: RequestParams) => {
 
     // Create headers.
     const headers = {
-      Authorization: `Bearer ${retreiveToken()}`,
-      "Content-Type": "application/json",
+      Authorization: `Bearer ${await retreiveToken()}`,
     };
 
     // Create request url.
