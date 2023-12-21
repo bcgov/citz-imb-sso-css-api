@@ -72,8 +72,8 @@ jobs:
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./releases/bcgov-citz-imb-kc-express-${{ steps.package_version.outputs.VERSION }}.tgz
-          asset_name: bcgov-citz-imb-kc-express-${{ steps.package_version.outputs.VERSION }}.tgz
+          asset_path: ./releases/bcgov-citz-imb-kc-css-api-${{ steps.package_version.outputs.VERSION }}.tgz
+          asset_name: bcgov-citz-imb-kc-css-api-${{ steps.package_version.outputs.VERSION }}.tgz
           asset_content_type: application/gzip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
