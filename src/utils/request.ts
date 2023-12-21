@@ -20,17 +20,26 @@ export const request = async (params: RequestParams) => {
     };
 
     // Create request url.
-    const integration = `integrations/${SSO_INTEGRATION_ID}/`;
+    const integrationID = SSO_INTEGRATION_ID.replace(/^0+/, ""); // Trim leading zeros.
+    const integration = `integrations/${integrationID}/`;
     const url = `${CSS_API_URL}/${
       integrationEndpoint && integration
     }${SSO_ENVIRONMENT}/${endpoint}`;
 
     // Fetch request.
-    const response = await fetch(url, {
-      method,
-      headers,
-      body: qs.stringify(body),
-    });
+    const response = await fetch(
+      url,
+      body
+        ? {
+            method,
+            headers,
+            body: qs.stringify(body),
+          }
+        : {
+            method,
+            headers,
+          }
+    );
     return await response.json();
   } catch (error) {
     // Something went wrong.
