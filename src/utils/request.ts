@@ -2,7 +2,7 @@ import qs from "querystring";
 import { RequestParams } from "../types";
 import { retreiveToken } from "./token";
 import config from "../config";
-const { SSO_INTEGRATION_ID, SSO_ENVIRONMENT, CSS_API_URL } = config;
+const { SSO_INTEGRATION_ID, SSO_ENVIRONMENT, CSS_API_URL, DEBUG } = config;
 
 export const request = async (params: RequestParams) => {
   try {
@@ -39,6 +39,14 @@ export const request = async (params: RequestParams) => {
             headers,
           }
     );
+
+    // Log debug info.
+    if (DEBUG)
+      console.log(
+        `DEBUG: Request to ${endpoint} in 'citz-imb-kc-css-api': `,
+        response
+      );
+
     return await response.json();
   } catch (error) {
     // Something went wrong.
