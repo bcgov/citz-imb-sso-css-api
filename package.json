@@ -41,5 +41,8 @@
   },
   "bugs": {
     "url": "https://github.com/bcgov/citz-imb-kc-css-api/issues"
+  },
+  "dependencies": {
+    "dotenv": "16.3.1"
   }
 }

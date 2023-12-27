@@ -8,18 +8,13 @@ export const retreiveToken = async () => {
       grant_type: "client_credentials",
     };
 
-    console.log(
-      `CSS_API_CLIENT_ID ${CSS_API_CLIENT_ID}, CSS_API_CLIENT_SECRET ${CSS_API_CLIENT_SECRET}`
-    );
-
     const headers = {
       Authorization: `Basic ${btoa(
         `${CSS_API_CLIENT_ID}:${CSS_API_CLIENT_SECRET}`
       )}`,
       Accept: "application/json",
+      "Content-Type": "application/json",
     };
-
-    console.log(`Authorization: ${headers.Authorization}`);
 
     const response = await fetch(`${CSS_API_URL}/token`, {
       method: "POST",
@@ -27,7 +22,8 @@ export const retreiveToken = async () => {
       body: JSON.stringify(body),
     });
 
-    const { access_token } = await response.json();
+    const data = await response.text();
+    const access_token = JSON.parse(data).access_token;
 
     // Log debug info.
     if (DEBUG && !response.ok) {

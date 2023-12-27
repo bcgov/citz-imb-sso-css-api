@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 // Roles
 export {
   getRoles, // Get all roles from integration
