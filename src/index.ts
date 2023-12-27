@@ -12,10 +12,9 @@ export {
 } from "./roles";
 
 // Role-Mapping
-// username: <guid>@<identity_provider> Example : jj4vrfekurtzc2931k8mroqx3fgibrr3@idir
 export {
   getUserRoles, // Get roles associated with a user
-  assignUserRoles, // Assign a role to a user
+  assignUserRoles, // Assign roles to a user
   getUsersWithRole, // Get users associated with a role
   unassignUserRole, // Unassign a role from a user
 } from "./roleMapping";

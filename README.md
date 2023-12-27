@@ -119,7 +119,7 @@ import {
   getRoleComposite, // Get a composite role from a role
   deleteRoleComposite, // Remove a composite role from a role
   getUserRoles, // Get roles associated with a user
-  assignUserRole, // Assign a role to a user
+  assignUserRoles, // Assign roles to a user
   getUsersWithRole, // Get users associated with a role
   unassignUserRole, // Unassign a role from a user
   getIDIRUsers, // Get list of IDIR users by query
