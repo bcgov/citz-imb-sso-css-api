@@ -1,4 +1,5 @@
 import qs from "querystring";
+import { encodeJWT } from "./jwt";
 import config from "../config";
 const { CSS_API_CLIENT_ID, CSS_API_CLIENT_SECRET, CSS_API_URL, DEBUG } = config;
 
@@ -9,20 +10,22 @@ export const retreiveToken = async () => {
       grant_type: "client_credentials",
     };
 
-    const basicAuth = `Basic ${Buffer.from(
-      CSS_API_CLIENT_ID + ":" + CSS_API_CLIENT_SECRET
-    ).toString("base64")}`;
+    const headers = {
+      Authorization: `Basic ${encodeJWT(
+        `${CSS_API_CLIENT_ID}:${CSS_API_CLIENT_SECRET}`
+      )}`,
+    };
 
     const response = await fetch(`${CSS_API_URL}/token`, {
       method: "POST",
-      headers: { Authorization: basicAuth },
+      headers,
       body: qs.stringify(body),
     });
 
     const { access_token } = await response.json();
 
     // Log debug info.
-    if (DEBUG)
+    if (DEBUG && !response.ok)
       console.log(`DEBUG: retreiveToken in 'citz-imb-kc-css-api': `, response);
 
     return access_token;

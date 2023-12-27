@@ -14,8 +14,9 @@ export const request = async (params: RequestParams) => {
     } = params;
 
     // Create headers.
+    const access_token = await retreiveToken();
     const headers = {
-      Authorization: `Bearer ${await retreiveToken()}`,
+      Authorization: `Bearer ${access_token}`,
     };
 
     // Create request url.
@@ -41,7 +42,7 @@ export const request = async (params: RequestParams) => {
     );
 
     // Log debug info.
-    if (DEBUG)
+    if (DEBUG && !response.ok)
       console.log(
         `DEBUG: Request to ${endpoint} in 'citz-imb-kc-css-api': `,
         response
