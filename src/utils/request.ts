@@ -20,6 +20,7 @@ export const request = async (params: RequestParams) => {
     // Create headers.
     const headers = {
       Authorization: `Bearer ${access_token}`,
+      Accept: "application/json",
       "Content-Type": "application/json",
     };
 
@@ -52,8 +53,7 @@ export const request = async (params: RequestParams) => {
         status: response.status,
         statusText: response.statusText,
         url: response.url,
-        originalUrl: url,
-        headers: response.headers,
+        headers: JSON.stringify(response.headers),
       };
       console.log(
         `DEBUG: Request to ${endpoint} in 'citz-imb-kc-css-api': `,

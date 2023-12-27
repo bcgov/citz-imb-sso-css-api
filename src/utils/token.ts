@@ -1,4 +1,3 @@
-import { encodeJWT } from "./jwt";
 import config from "../config";
 const { CSS_API_CLIENT_ID, CSS_API_CLIENT_SECRET, CSS_API_URL, DEBUG } = config;
 
@@ -10,9 +9,10 @@ export const retreiveToken = async () => {
     };
 
     const headers = {
-      Authorization: `Basic ${encodeJWT(
+      Authorization: `Basic ${btoa(
         `${CSS_API_CLIENT_ID}:${CSS_API_CLIENT_SECRET}`
       )}`,
+      Accept: "application/json",
       "Content-Type": "application/json",
     };
 
@@ -31,8 +31,7 @@ export const retreiveToken = async () => {
         status: response.status,
         statusText: response.statusText,
         url: response.url,
-        originalUrl: `${CSS_API_URL}/token`,
-        headers: response.headers,
+        headers: JSON.stringify(response.headers),
       };
       console.log(
         `DEBUG: retreiveToken in 'citz-imb-kc-css-api': `,
