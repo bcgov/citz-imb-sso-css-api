@@ -25,8 +25,7 @@ export const request = async (params: RequestParams) => {
     };
 
     // Create request url.
-    const integrationID = SSO_INTEGRATION_ID.replace(/^0+/, ""); // Trim leading zeros.
-    const integration = `integrations/${integrationID}/`;
+    const integration = `integrations/${SSO_INTEGRATION_ID}/`;
     const url = `${CSS_API_URL}/${
       integrationEndpoint && integration
     }${SSO_ENVIRONMENT}/${endpoint}`;
