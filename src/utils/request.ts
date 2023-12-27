@@ -54,7 +54,6 @@ export const request = async (params: RequestParams) => {
         url: response.url,
         originalUrl: url,
         headers: response.headers,
-        body: response.body,
       };
       console.log(
         `DEBUG: Request to ${endpoint} in 'citz-imb-kc-css-api': `,

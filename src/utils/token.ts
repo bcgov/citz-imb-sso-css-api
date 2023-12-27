@@ -33,7 +33,6 @@ export const retreiveToken = async () => {
         url: response.url,
         originalUrl: `${CSS_API_URL}/token`,
         headers: response.headers,
-        json: await response.json(),
       };
       console.log(
         `DEBUG: retreiveToken in 'citz-imb-kc-css-api': `,
