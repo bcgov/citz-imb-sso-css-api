@@ -1,4 +1,3 @@
-import qs from "querystring";
 import { RequestParams } from "../types";
 import { retreiveToken } from "./token";
 import config from "../config";
@@ -21,6 +20,7 @@ export const request = async (params: RequestParams) => {
     // Create headers.
     const headers = {
       Authorization: `Bearer ${access_token}`,
+      "Content-Type": "application/json",
     };
 
     // Create request url.
@@ -37,7 +37,7 @@ export const request = async (params: RequestParams) => {
         ? {
             method,
             headers,
-            body: qs.stringify(body),
+            body: JSON.stringify(body),
           }
         : {
             method,

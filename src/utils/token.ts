@@ -1,4 +1,3 @@
-import qs from "querystring";
 import { encodeJWT } from "./jwt";
 import config from "../config";
 const { CSS_API_CLIENT_ID, CSS_API_CLIENT_SECRET, CSS_API_URL, DEBUG } = config;
@@ -14,12 +13,13 @@ export const retreiveToken = async () => {
       Authorization: `Basic ${encodeJWT(
         `${CSS_API_CLIENT_ID}:${CSS_API_CLIENT_SECRET}`
       )}`,
+      "Content-Type": "application/json",
     };
 
     const response = await fetch(`${CSS_API_URL}/token`, {
       method: "POST",
       headers,
-      body: qs.stringify(body),
+      body: JSON.stringify(body),
     });
 
     const { access_token } = await response.json();
