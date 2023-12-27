@@ -33,7 +33,6 @@ export const retreiveToken = async () => {
         url: response.url,
         originalUrl: `${CSS_API_URL}/token`,
         headers: response.headers,
-        body: response.body,
         json: await response.json(),
       };
       console.log(

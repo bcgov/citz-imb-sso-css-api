@@ -16,7 +16,7 @@ export const request = async (params: RequestParams) => {
     // Get token.
     const access_token = await retreiveToken();
     if (!access_token)
-      throw new Error("No access token provided by retrieve token.");
+      throw new Error("No access token provided by retrieveToken().");
 
     // Create headers.
     const headers = {
