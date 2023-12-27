@@ -13,8 +13,12 @@ export const request = async (params: RequestParams) => {
       body,
     } = params;
 
-    // Create headers.
+    // Get token.
     const access_token = await retreiveToken();
+    if (!access_token)
+      throw new Error("No access token provided by retrieve token.");
+
+    // Create headers.
     const headers = {
       Authorization: `Bearer ${access_token}`,
     };
@@ -42,11 +46,21 @@ export const request = async (params: RequestParams) => {
     );
 
     // Log debug info.
-    if (DEBUG && !response.ok)
+    if (DEBUG && !response.ok) {
+      const formattedResponse = {
+        ok: response.ok,
+        status: response.status,
+        statusText: response.statusText,
+        url: response.url,
+        originalUrl: url,
+        headers: response.headers,
+        body: response.body,
+      };
       console.log(
         `DEBUG: Request to ${endpoint} in 'citz-imb-kc-css-api': `,
-        response
+        formattedResponse
       );
+    }
 
     return await response.json();
   } catch (error) {

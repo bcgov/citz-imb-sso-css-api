@@ -25,8 +25,22 @@ export const retreiveToken = async () => {
     const { access_token } = await response.json();
 
     // Log debug info.
-    if (DEBUG && !response.ok)
-      console.log(`DEBUG: retreiveToken in 'citz-imb-kc-css-api': `, response);
+    if (DEBUG && !response.ok) {
+      const formattedResponse = {
+        ok: response.ok,
+        status: response.status,
+        statusText: response.statusText,
+        url: response.url,
+        originalUrl: `${CSS_API_URL}/token`,
+        headers: response.headers,
+        body: response.body,
+        json: await response.json(),
+      };
+      console.log(
+        `DEBUG: retreiveToken in 'citz-imb-kc-css-api': `,
+        formattedResponse
+      );
+    }
 
     return access_token;
   } catch (error) {
