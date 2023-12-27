@@ -27,7 +27,7 @@ export const request = async (params: RequestParams) => {
     // Create request url.
     const integration = `integrations/${SSO_INTEGRATION_ID}/`;
     const url = `${CSS_API_URL}/${
-      integrationEndpoint && integration
+      integrationEndpoint ? integration : ""
     }${SSO_ENVIRONMENT}/${endpoint}`;
 
     // Fetch request.
@@ -60,7 +60,9 @@ export const request = async (params: RequestParams) => {
       );
     }
 
-    return await response.json();
+    // Return json if 200 or 201 reponse, otherwise return text.
+    if ([200, 201].includes(response.status)) return await response.json();
+    return await response.text();
   } catch (error) {
     // Something went wrong.
     console.error(

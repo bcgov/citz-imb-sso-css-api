@@ -154,9 +154,11 @@ const getRoleComposite: (roleName: string, compositeRoleName: string) => Promise
 const deleteRoleComposite: (roleName: string, compositeRoleName: string) => Promise<any>;
 
 // Role-Mapping
+// username: <guid>@<identity_provider> 
+// Example : jj4vrfekurtzc2931k8mroqx3fgibrr3@idir
 const getUserRoles: (username: string) => Promise<any>;
-const assignUserRole: (username: string, roleName: string) => Promise<any>;
-const getUsersWithRole: (roleName: string) => Promise<any>;
+const assignUserRoles: (username: string, roleNames: string[]) => Promise<any>;
+const getUsersWithRole: (roleName: string, page?: number, count?: number) => Promise<any>;
 const unassignUserRole: (username: string, roleName: string) => Promise<any>;
 
 // Users
@@ -175,12 +177,14 @@ type RequestParams = {
   body?: RequestBody;
 };
 
-type RequestBody = {
+type RequestRoleObject = {
   name: string;
 };
 
+type RequestBody = RequestRoleObject | RequestRoleObject[] | [];
+
 type IDIRUserQuery = {
-  firstName?: string;
+  firstName: string;
   lastName?: string;
   email?: string;
   guid?: string;

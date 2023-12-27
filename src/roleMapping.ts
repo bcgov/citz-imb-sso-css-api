@@ -1,18 +1,31 @@
+import { RequestBody } from "./types";
 import { request } from "./utils/request";
 
 export const getUserRoles = (username: string) =>
   request({ integrationEndpoint: true, endpoint: `users/${username}/roles` });
 
-export const assignUserRole = (username: string, roleName: string) =>
+export const assignUserRoles = (username: string, roleNames: string[]) =>
   request({
     integrationEndpoint: true,
     endpoint: `users/${username}/roles`,
     method: "POST",
-    body: { name: roleName },
+    body:
+      (roleNames.map((roleName) => {
+        name: roleName;
+      }) as RequestBody) ?? [],
   });
 
-export const getUsersWithRole = (roleName: string) =>
-  request({ integrationEndpoint: true, endpoint: `roles/${roleName}/users` });
+export const getUsersWithRole = (
+  roleName: string,
+  page?: number,
+  count?: number
+) =>
+  request({
+    integrationEndpoint: true,
+    endpoint: `roles/${roleName}/users${
+      page ? `?page=${page}${count ? `&count=${count}` : ""}` : ""
+    }`,
+  });
 
 export const unassignUserRole = (username: string, roleName: string) =>
   request({

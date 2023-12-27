@@ -5,12 +5,14 @@ export type RequestParams = {
   body?: RequestBody;
 };
 
-type RequestBody = {
+type RequestRoleObject = {
   name: string;
 };
 
+export type RequestBody = RequestRoleObject | RequestRoleObject[] | [];
+
 export type IDIRUserQuery = {
-  firstName?: string;
+  firstName: string;
   lastName?: string;
   email?: string;
   guid?: string;
