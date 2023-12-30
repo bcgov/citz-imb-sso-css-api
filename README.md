@@ -77,7 +77,35 @@
 
 1. Add the required environment variables from the [Environment Variables](#environment-variables) section below.
 
-2. Start using the functions provided as shown in [Module Exports](#module-exports).
+2. Start using the functions provided in [Module Exports](#module-exports).
+
+*Example use:*
+
+``` TypeScript
+import { getRole, getRoleComposites } from "@bcgov/citz-imb-kc-css-api";
+
+/**
+ * @returns {object} - Below properties.
+ * @property {string} name - the name of the role (ex: "Admin").
+ * @property {boolean} composite - if the role is composite (containing 'child' roles).
+ */
+const { composite } = await getRole('Admin');
+
+if (composite) {
+  /**
+   * @returns {object} - Below properties.
+   * @property {object[]} data - Array of role composites.
+   * @property {string} data[i].name - the name of the composite role (ex: "view-reports").
+   * @property {boolean} data[i].composite - if the role is composite (containing 'child' roles).
+   */
+  const { data } = await getRoleComposites('Admin');
+  data.forEach(({ name }) => console.log('Admin role holds composite: ', name));
+}
+```
+
+> [!NOTE]  
+> Role composites are set within the CSS SSO Dashboard.  
+> Go to 'My Projects' > 'Integrations' > *Select an Integration* > 'Integration Details' > 'Role Management' > *Select a Role* > 'Composite Roles'.
 
 [Return to Top](#bcgov-css-sso-api-integration)
 
