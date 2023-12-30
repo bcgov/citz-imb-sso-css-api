@@ -34,7 +34,7 @@ export const retreiveToken = async () => {
         url: response.url,
         headers: JSON.stringify(response.headers),
       };
-      console.log(
+      console.error(
         `DEBUG: retreiveToken in 'citz-imb-kc-css-api': `,
         formattedResponse
       );
@@ -43,6 +43,6 @@ export const retreiveToken = async () => {
     return access_token;
   } catch (error) {
     // Something went wrong.
-    console.log(`Error in retrieveToken of 'citz-imb-kc-css-api'.`, error);
+    console.error(`Error in retrieveToken of 'citz-imb-kc-css-api'.`, error);
   }
 };

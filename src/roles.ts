@@ -1,19 +1,18 @@
 import { request } from "./utils/request";
+import { logDebug } from "./utils/logDebug";
 import config from "./config";
 const { DEBUG } = config;
 
 // getRoles - Get all roles from integration.
-export const getRoles = () => {
-  if (DEBUG)
-    console.log("DEBUG: getRoles function in `citz-imb-kc-css-api` called.");
-  request({ integrationEndpoint: true, endpoint: "roles" });
+export const getRoles = async () => {
+  if (DEBUG) logDebug("getRoles");
+  return await request({ integrationEndpoint: true, endpoint: "roles" });
 };
 
 // createRole - Create a new role.
-export const createRole = (roleName: string) => {
-  if (DEBUG)
-    console.log("DEBUG: createRole function in `citz-imb-kc-css-api` called.");
-  request({
+export const createRole = async (roleName: string) => {
+  if (DEBUG) logDebug("createRole");
+  return await request({
     integrationEndpoint: true,
     endpoint: "roles",
     method: "POST",
@@ -22,17 +21,18 @@ export const createRole = (roleName: string) => {
 };
 
 // getRole - Get role details.
-export const getRole = (roleName: string) => {
-  if (DEBUG)
-    console.log("DEBUG: getRole function in `citz-imb-kc-css-api` called.");
-  request({ integrationEndpoint: true, endpoint: `roles/${roleName}` });
+export const getRole = async (roleName: string) => {
+  if (DEBUG) logDebug("getRole");
+  return await request({
+    integrationEndpoint: true,
+    endpoint: `roles/${roleName}`,
+  });
 };
 
 // updateRole - Update a role name.
-export const updateRole = (roleName: string, newRoleName: string) => {
-  if (DEBUG)
-    console.log("DEBUG: updateRole function in `citz-imb-kc-css-api` called.");
-  request({
+export const updateRole = async (roleName: string, newRoleName: string) => {
+  if (DEBUG) logDebug("updateRole");
+  return await request({
     integrationEndpoint: true,
     endpoint: `roles/${roleName}`,
     method: "PUT",
@@ -41,10 +41,9 @@ export const updateRole = (roleName: string, newRoleName: string) => {
 };
 
 // deleteRole - Remove a role.
-export const deleteRole = (roleName: string) => {
-  if (DEBUG)
-    console.log("DEBUG: deleteRole function in `citz-imb-kc-css-api` called.");
-  request({
+export const deleteRole = async (roleName: string) => {
+  if (DEBUG) logDebug("deleteRole");
+  return await request({
     integrationEndpoint: true,
     endpoint: `roles/${roleName}`,
     method: "DELETE",
@@ -52,27 +51,21 @@ export const deleteRole = (roleName: string) => {
 };
 
 // getRoleComposites - Get a role's composites.
-export const getRoleComposites = (roleName: string) => {
-  if (DEBUG)
-    console.log(
-      "DEBUG: getRoleComposites function in `citz-imb-kc-css-api` called."
-    );
-  request({
+export const getRoleComposites = async (roleName: string) => {
+  if (DEBUG) logDebug("getRoleComposites");
+  return await request({
     integrationEndpoint: true,
     endpoint: `roles/${roleName}/composite-roles`,
   });
 };
 
 // addRoleComposite - Add a composite to a role.
-export const addRoleComposite = (
+export const addRoleComposite = async (
   roleName: string,
   newCompositeRole: string
 ) => {
-  if (DEBUG)
-    console.log(
-      "DEBUG: addRoleComposite function in `citz-imb-kc-css-api` called."
-    );
-  request({
+  if (DEBUG) logDebug("addRoleComposite");
+  return await request({
     integrationEndpoint: true,
     endpoint: `roles/${roleName}/composite-roles`,
     method: "POST",
@@ -81,30 +74,24 @@ export const addRoleComposite = (
 };
 
 // getRoleComposite - Get a composite role from a role.
-export const getRoleComposite = (
+export const getRoleComposite = async (
   roleName: string,
   compositeRoleName: string
 ) => {
-  if (DEBUG)
-    console.log(
-      "DEBUG: getRoleComposite function in `citz-imb-kc-css-api` called."
-    );
-  request({
+  if (DEBUG) logDebug("getRoleComposite");
+  return await request({
     integrationEndpoint: true,
     endpoint: `roles/${roleName}/composite-roles/${compositeRoleName}`,
   });
 };
 
 // deleteRoleComposite - Remove a composite role from a role.
-export const deleteRoleComposite = (
+export const deleteRoleComposite = async (
   roleName: string,
   compositeRoleName: string
 ) => {
-  if (DEBUG)
-    console.log(
-      "DEBUG: deleteRoleComposite function in `citz-imb-kc-css-api` called."
-    );
-  request({
+  if (DEBUG) logDebug("deleteRoleComposite");
+  return await request({
     integrationEndpoint: true,
     endpoint: `roles/${roleName}/composite-roles/${compositeRoleName}`,
     method: "DELETE",

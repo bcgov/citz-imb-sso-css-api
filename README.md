@@ -1,4 +1,4 @@
-# BCGov CSS SSO API Integration as Addon to citz-imb-kc-express Package
+# BCGov CSS SSO API Integration
 
 [![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)](Redirect-URL)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
@@ -69,7 +69,7 @@
 
 3. Run `npm install` to add the package.
 
-[Return to Top](#bcgov-css-sso-api-integration-as-addon-to-citz-imb-kc-express-package)
+[Return to Top](#bcgov-css-sso-api-integration)
 
 <br />
 
@@ -79,7 +79,7 @@
 
 2. Start using the functions provided as shown in [Module Exports](#module-exports).
 
-[Return to Top](#bcgov-css-sso-api-integration-as-addon-to-citz-imb-kc-express-package)
+[Return to Top](#bcgov-css-sso-api-integration)
 
 <br />
 
@@ -99,7 +99,7 @@ CSS_API_URL= # (optional) CSS API url, see default value below.
 # https://api.loginproxy.gov.bc.ca/api/v1
 ```
 
-[Return to Top](#bcgov-css-sso-api-integration-as-addon-to-citz-imb-kc-express-package)
+[Return to Top](#bcgov-css-sso-api-integration)
 
 <br />
 
@@ -109,31 +109,31 @@ These are the functions and types exported by the `@bcgov/citz-imb-kc-css-api` m
 
 ```JavaScript
 import {
-  getRoles, // Get all roles from integration
-  createRole, // Create a new role
-  getRole, // Get role details
-  updateRole, // Update a role name
-  deleteRole, // Remove a role
-  getRoleComposites, // Get a role's composites
-  addRoleComposite, // Add a composite to a role
-  getRoleComposite, // Get a composite role from a role
-  deleteRoleComposite, // Remove a composite role from a role
-  getUserRoles, // Get roles associated with a user
-  assignUserRoles, // Assign roles to a user
-  getUsersWithRole, // Get users associated with a role
-  unassignUserRole, // Unassign a role from a user
-  getIDIRUsers, // Get list of IDIR users by query
-  getAzureIDIRUsers, // Get list of Azure IDIR users by query
-  getGitHubBCGovUsers, // Get list of GitHub BCGov users by query
-  getGitHubPublicUsers, // Get list of GitHub Public users by query
-  getBasicBCeIDUser, // Get Basic BCeID user by guid
-  getBusinessBCeIDUser, // Get Business BCeID user by guid
-  getBothBCeIDUser, // Get Basic or Business BCeID user by guid
+  getRoles, // Get all roles from integration.
+  createRole, // Create a new role.
+  getRole, // Get role details.
+  updateRole, // Update a role name.
+  deleteRole, // Remove a role.
+  getRoleComposites, // Get a role's composites.
+  addRoleComposite, // Add a composite to a role.
+  getRoleComposite, // Get a composite role from a role.
+  deleteRoleComposite, // Remove a composite role from a role.
+  getUserRoles, // Get roles associated with a user.
+  assignUserRoles, // Assign roles to a user.
+  getUsersWithRole, // Get users associated with a role.
+  unassignUserRole, // Unassign a role from a user.
+  getIDIRUsers, // Get list of IDIR users by query.
+  getAzureIDIRUsers, // Get list of Azure IDIR users by query.
+  getGitHubBCGovUsers, // Get list of GitHub BCGov users by query.
+  getGitHubPublicUsers, // Get list of GitHub Public users by query.
+  getBasicBCeIDUser, // Get Basic BCeID user by guid.
+  getBusinessBCeIDUser, // Get Business BCeID user by guid.
+  getBothBCeIDUser, // Get Basic or Business BCeID user by guid.
 } from '@bcgov/citz-imb-kc-css-api';
 
 ```
 
-[Return to Top](#bcgov-css-sso-api-integration-as-addon-to-citz-imb-kc-express-package)
+[Return to Top](#bcgov-css-sso-api-integration)
 
 <br />
 
@@ -198,7 +198,7 @@ type GitHubUserQuery = {
 };
 ```
 
-[Return to Top](#bcgov-css-sso-api-integration-as-addon-to-citz-imb-kc-express-package)
+[Return to Top](#bcgov-css-sso-api-integration)
 
 <br />
 
@@ -210,7 +210,7 @@ None atm.
 
 <!-- TBD: [SET](https://github.com/bcgov/citz-imb-salary-estimate-tool) - Salary Estimation Tool -->
 
-[Return to Top](#bcgov-css-sso-api-integration-as-addon-to-citz-imb-kc-express-package)
+[Return to Top](#bcgov-css-sso-api-integration)
 
 <!-- Link References -->
 
