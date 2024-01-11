@@ -234,8 +234,7 @@ type GitHubUserQuery = {
 
 The following applications are currently using this keycloak implementation solution:
 
-None atm.
-
+[PLAY](https://github.com/bcgov/citz-imb-playground) - CITZ IMB Package Testing App
 <!-- TBD: [SET](https://github.com/bcgov/citz-imb-salary-estimate-tool) - Salary Estimation Tool -->
 
 [Return to Top](#bcgov-css-sso-api-integration)
