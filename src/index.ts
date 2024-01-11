@@ -1,3 +1,6 @@
+// Integration
+export { getIntegration } from "./integration";
+
 // Roles
 export {
   getRoles, // Get all roles from integration.

@@ -7,6 +7,7 @@ export const request = async (params: RequestParams) => {
   try {
     const {
       integrationEndpoint = false,
+      environmentEndpoint = true,
       endpoint = "",
       method = "GET",
       body,
@@ -26,9 +27,9 @@ export const request = async (params: RequestParams) => {
 
     // Create request url.
     const integration = `integrations/${SSO_INTEGRATION_ID}/`;
-    const url = `${CSS_API_URL}/${
-      integrationEndpoint ? integration : ""
-    }${SSO_ENVIRONMENT}/${endpoint}`;
+    const url = `${CSS_API_URL}/${integrationEndpoint ? integration : ""}${
+      environmentEndpoint ? `${SSO_ENVIRONMENT}/` : ""
+    }${endpoint}`;
 
     // Fetch request.
     const response = await fetch(

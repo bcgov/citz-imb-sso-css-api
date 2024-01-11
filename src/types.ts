@@ -1,5 +1,6 @@
 export type RequestParams = {
-  integrationEndpoint: boolean;
+  integrationEndpoint?: boolean;
+  environmentEndpoint?: boolean;
   endpoint: string;
   method?: "GET" | "POST" | "PUT" | "DELETE";
   body?: RequestBody;

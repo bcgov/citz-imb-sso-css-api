@@ -137,6 +137,7 @@ These are the functions and types exported by the `@bcgov/citz-imb-kc-css-api` m
 
 ```JavaScript
 import {
+  getIntegration, // Get integration details.
   getRoles, // Get all roles from integration.
   createRole, // Create a new role.
   getRole, // Get role details.
@@ -170,6 +171,9 @@ import {
 These are the TypeScript types of the `@bcgov/citz-imb-kc-css-api` module.
 
 ```TypeScript
+// Integration
+const getIntegration: () => Promise<any>;
+
 // Roles
 const getRoles: () => Promise<any>;
 const createRole: (roleName: string) => Promise<any>;
@@ -199,9 +203,10 @@ const getBusinessBCeIDUser: (guid: string) => Promise<any>;
 const getBothBCeIDUser: (guid: string) => Promise<any>;
 
 type RequestParams = {
-  integrationEndpoint: boolean;
+  integrationEndpoint?: boolean; // Default: false
+  environmentEndpoint?: boolean; // Default: true
   endpoint: string;
-  method?: "GET" | "POST" | "PUT" | "DELETE";
+  method?: "GET" | "POST" | "PUT" | "DELETE"; // Default: GET
   body?: RequestBody;
 };
 
@@ -226,6 +231,10 @@ type GitHubUserQuery = {
 };
 ```
 
+> [!IMPORTANT]
+> For expected response data, reference the following swagger docs:
+[BCGov Keycloak CSS SSO API Swagger]
+
 [Return to Top](#bcgov-css-sso-api-integration)
 
 <br />
@@ -244,3 +253,4 @@ The following applications are currently using this keycloak implementation solu
 [@bcgov/citz-imb-kc-express]: https://github.com/bcgov/citz-imb-kc-express
 [releases]: https://github.com/bcgov/citz-imb-kc-css-api/releases
 [BCGov Keycloak CSS SSO API]: https://github.com/bcgov/sso-keycloak/wiki/CSS-API-Account
+[BCGov Keycloak CSS SSO API Swagger]: https://api.loginproxy.gov.bc.ca/openapi/swagger
