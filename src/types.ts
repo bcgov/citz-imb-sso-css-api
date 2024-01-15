@@ -13,7 +13,7 @@ type RequestRoleObject = {
 export type RequestBody = RequestRoleObject | RequestRoleObject[] | [];
 
 export type IDIRUserQuery = {
-  firstName: string;
+  firstName?: string;
   lastName?: string;
   email?: string;
   guid?: string;
