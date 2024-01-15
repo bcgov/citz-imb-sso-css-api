@@ -24,9 +24,9 @@ export const assignUserRoles = async (
     endpoint: `users/${username}/roles`,
     method: "POST",
     body:
-      (roleNames.map((roleName) => {
-        name: roleName;
-      }) as RequestBody) ?? [],
+      (roleNames.map((roleName) => ({
+        name: roleName,
+      })) as RequestBody) ?? [],
   });
 };
 
