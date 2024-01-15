@@ -194,10 +194,10 @@ const getUsersWithRole: (roleName: string, page?: number, count?: number) => Pro
 const unassignUserRole: (username: string, roleName: string) => Promise<any>;
 
 // Users
-const getIDIRUsers: (query?: IDIRUserQuery) => Promise<any>;
-const getAzureIDIRUsers: (query?: IDIRUserQuery) => Promise<any>;
-const getGitHubBCGovUsers: (query?: GitHubUserQuery) => Promise<any>;
-const getGitHubPublicUsers: (query?: GitHubUserQuery) => Promise<any>;
+const getIDIRUsers: (query: IDIRUserQuery) => Promise<any>;
+const getAzureIDIRUsers: (query: IDIRUserQuery) => Promise<any>;
+const getGitHubBCGovUsers: (query: GitHubUserQuery) => Promise<any>;
+const getGitHubPublicUsers: (query: GitHubUserQuery) => Promise<any>;
 const getBasicBCeIDUser: (guid: string) => Promise<any>;
 const getBusinessBCeIDUser: (guid: string) => Promise<any>;
 const getBothBCeIDUser: (guid: string) => Promise<any>;
@@ -217,7 +217,7 @@ type RequestRoleObject = {
 type RequestBody = RequestRoleObject | RequestRoleObject[] | [];
 
 type IDIRUserQuery = {
-  firstName: string;
+  firstName?: string;
   lastName?: string;
   email?: string;
   guid?: string;

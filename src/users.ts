@@ -6,7 +6,7 @@ import config from "./config";
 const { DEBUG } = config;
 
 // getIDIRUsers - Get list of IDIR users by query.
-export const getIDIRUsers = async (query?: IDIRUserQuery) => {
+export const getIDIRUsers = async (query: IDIRUserQuery) => {
   if (DEBUG) logDebug("getIDIRUsers");
   return await request({
     integrationEndpoint: false,
@@ -15,7 +15,7 @@ export const getIDIRUsers = async (query?: IDIRUserQuery) => {
 };
 
 // getAzureIDIRUsers - Get list of Azure IDIR users by query.
-export const getAzureIDIRUsers = async (query?: IDIRUserQuery) => {
+export const getAzureIDIRUsers = async (query: IDIRUserQuery) => {
   if (DEBUG) logDebug("getAzureIDIRUsers");
   return await request({
     integrationEndpoint: false,
@@ -24,7 +24,7 @@ export const getAzureIDIRUsers = async (query?: IDIRUserQuery) => {
 };
 
 // getGitHubBCGovUsers - Get list of GitHub BCGov users by query.
-export const getGitHubBCGovUsers = async (query?: GitHubUserQuery) => {
+export const getGitHubBCGovUsers = async (query: GitHubUserQuery) => {
   if (DEBUG) logDebug("getGitHubBCGovUsers");
   return await request({
     integrationEndpoint: false,
@@ -33,7 +33,7 @@ export const getGitHubBCGovUsers = async (query?: GitHubUserQuery) => {
 };
 
 // getGitHubPublicUsers - Get list of GitHub Public users by query.
-export const getGitHubPublicUsers = async (query?: GitHubUserQuery) => {
+export const getGitHubPublicUsers = async (query: GitHubUserQuery) => {
   if (DEBUG) logDebug("getGitHubPublicUsers");
   return await request({
     integrationEndpoint: false,
