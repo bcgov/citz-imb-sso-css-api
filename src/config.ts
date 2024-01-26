@@ -7,10 +7,11 @@ const {
   CSS_API_CLIENT_SECRET = "",
   SSO_INTEGRATION_ID = "",
   DEBUG = "false",
+  VERBOSE_DEBUG = "false",
   CSS_API_URL = "https://api.loginproxy.gov.bc.ca/api/v1",
 } = process.env;
 
-if (DEBUG === "true") {
+if (DEBUG === "true" && VERBOSE_DEBUG === "true") {
   console.log(`DEBUG: 'citz-imb-kc-css-api' environment variables:
   SSO_ENVIRONMENT=${SSO_ENVIRONMENT}
   CSS_API_CLIENT_ID=${CSS_API_CLIENT_ID}
@@ -20,7 +21,8 @@ if (DEBUG === "true") {
 
 // Exports.
 export default {
-  DEBUG: DEBUG === "true" ? true : false,
+  DEBUG: DEBUG === "true",
+  VERBOSE_DEBUG: VERBOSE_DEBUG === "true",
   SSO_ENVIRONMENT,
   CSS_API_CLIENT_ID,
   CSS_API_CLIENT_SECRET,

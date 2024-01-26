@@ -125,6 +125,7 @@ SSO_INTEGRATION_ID= # Keycloak integration id (dont include leading zeros)
 SSO_ENVIRONMENT= # 'dev', 'test' or 'prod'. Default is 'dev'.
 
 DEBUG= # (optional) Set to 'true' to get useful debug statements in api console.
+VERBOSE_DEBUG= # (optional) Set to 'true' to get extra details from DEBUG.
 CSS_API_URL= # (optional) CSS API url, see default value below.
 # https://api.loginproxy.gov.bc.ca/api/v1
 ```
@@ -310,8 +311,9 @@ type GitHubUserQuery = {
 
 The following applications are currently using this keycloak implementation solution:
 
-[PLAY](https://github.com/bcgov/citz-imb-playground) - CITZ IMB Package Testing App
 <!-- TBD: [SET](https://github.com/bcgov/citz-imb-salary-estimate-tool) - Salary Estimation Tool -->
+[PIMS](https://github.com/bcgov/PIMS) - Property Inventory Management System (experimenting in express-api directory)
+[PLAY](https://github.com/bcgov/citz-imb-playground) - CITZ IMB Package Testing App
 
 [Return to Top](#bcgov-css-sso-api-integration)
 
