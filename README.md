@@ -258,7 +258,7 @@ const deleteRoleComposite: (roleName: string, compositeRoleName: string) => Prom
 // Example : jj4vrfekurtzc2931k8mroqx3fgibrr3@idir
 const getUserRoles: (username: string) => Promise<any>;
 const assignUserRoles: (username: string, roleNames: string[]) => Promise<any>;
-const getUsersWithRole: (roleName: string, page?: number, count?: number) => Promise<any>;
+const getUsersWithRole: (roleName: string, page?: number, maxCount?: number) => Promise<any>;
 const unassignUserRole: (username: string, roleName: string) => Promise<any>;
 
 // Users

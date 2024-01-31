@@ -25,7 +25,7 @@ export const assignUserRoles = async (
     method: "POST",
     body:
       (roleNames.map((roleName) => ({
-        name: roleName
+        name: roleName,
       })) as RequestBody) ?? [],
   });
 };
@@ -34,13 +34,13 @@ export const assignUserRoles = async (
 export const getUsersWithRole = async (
   roleName: string,
   page?: number,
-  count?: number
+  maxCount?: number
 ) => {
   if (DEBUG) logDebug("getUsersWithRole");
   return await request({
     integrationEndpoint: true,
     endpoint: `roles/${roleName}/users${
-      page ? `?page=${page}${count ? `&count=${count}` : ""}` : ""
+      page ? `?page=${page}${maxCount ? `&max=${maxCount}` : ""}` : ""
     }`,
   });
 };
