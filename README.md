@@ -312,7 +312,10 @@ type GitHubUserQuery = {
 The following applications are currently using this keycloak implementation solution:
 
 <!-- TBD: [SET](https://github.com/bcgov/citz-imb-salary-estimate-tool) - Salary Estimation Tool -->
-[PIMS](https://github.com/bcgov/PIMS) - Property Inventory Management System (experimenting in express-api directory)
+[PIMS](https://github.com/bcgov/PIMS) - Property Inventory Management System
+  - [New Backend](https://github.com/bcgov/PIMS/tree/main/express-api) - Switching from DotNet to Node Express API
+  - [Transfering Roles](https://github.com/bcgov/PIMS/pull/2166) - Transfering roles from an old integration to a new one.
+  
 [PLAY](https://github.com/bcgov/citz-imb-playground) - CITZ IMB Package Testing App
 
 [Return to Top](#bcgov-css-sso-api-integration)
