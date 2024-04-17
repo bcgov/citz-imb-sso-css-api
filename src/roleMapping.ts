@@ -1,12 +1,10 @@
 import { RequestBody } from "./types";
 import { request } from "./utils/request";
-import { logDebug } from "./utils/logDebug";
-import config from "./config";
-const { DEBUG } = config;
+import debug from "./utils/debug";
 
 // getUserRoles - Get roles associated with a user.
 export const getUserRoles = async (username: string) => {
-  if (DEBUG) logDebug("getUserRoles");
+  debug.functionCalled("getUserRoles");
   return await request({
     integrationEndpoint: true,
     endpoint: `users/${username}/roles`,
@@ -18,7 +16,7 @@ export const assignUserRoles = async (
   username: string,
   roleNames: string[]
 ) => {
-  if (DEBUG) logDebug("assignUserRoles");
+  debug.functionCalled("assignUserRoles");
   return await request({
     integrationEndpoint: true,
     endpoint: `users/${username}/roles`,
@@ -36,7 +34,7 @@ export const getUsersWithRole = async (
   page?: number,
   maxCount?: number
 ) => {
-  if (DEBUG) logDebug("getUsersWithRole");
+  debug.functionCalled("getUsersWithRole");
   return await request({
     integrationEndpoint: true,
     endpoint: `roles/${roleName}/users${
@@ -47,7 +45,7 @@ export const getUsersWithRole = async (
 
 // unassignUserRole - Unassign a role from a user.
 export const unassignUserRole = async (username: string, roleName: string) => {
-  if (DEBUG) logDebug("unassignUserRole");
+  debug.functionCalled("unassignUserRole");
   return await request({
     integrationEndpoint: true,
     endpoint: `users/${username}/roles/${roleName}`,

@@ -1,13 +1,11 @@
 import qs from "querystring";
 import { GitHubUserQuery, IDIRUserQuery } from "./types";
 import { request } from "./utils/request";
-import { logDebug } from "./utils/logDebug";
-import config from "./config";
-const { DEBUG } = config;
+import debug from "./utils/debug";
 
 // getIDIRUsers - Get list of IDIR users by query.
 export const getIDIRUsers = async (query: IDIRUserQuery) => {
-  if (DEBUG) logDebug("getIDIRUsers");
+  debug.functionCalled("getIDIRUsers");
   return await request({
     integrationEndpoint: false,
     endpoint: `idir/users${query ? `?${qs.stringify(query)}` : ""}`,
@@ -16,7 +14,7 @@ export const getIDIRUsers = async (query: IDIRUserQuery) => {
 
 // getAzureIDIRUsers - Get list of Azure IDIR users by query.
 export const getAzureIDIRUsers = async (query: IDIRUserQuery) => {
-  if (DEBUG) logDebug("getAzureIDIRUsers");
+  debug.functionCalled("getAzureIDIRUsers");
   return await request({
     integrationEndpoint: false,
     endpoint: `azure-idir/users${query ? `?${qs.stringify(query)}` : ""}`,
@@ -25,7 +23,7 @@ export const getAzureIDIRUsers = async (query: IDIRUserQuery) => {
 
 // getGitHubBCGovUsers - Get list of GitHub BCGov users by query.
 export const getGitHubBCGovUsers = async (query: GitHubUserQuery) => {
-  if (DEBUG) logDebug("getGitHubBCGovUsers");
+  debug.functionCalled("getGitHubBCGovUsers");
   return await request({
     integrationEndpoint: false,
     endpoint: `github-bcgov/users${query ? `?${qs.stringify(query)}` : ""}`,
@@ -34,7 +32,7 @@ export const getGitHubBCGovUsers = async (query: GitHubUserQuery) => {
 
 // getGitHubPublicUsers - Get list of GitHub Public users by query.
 export const getGitHubPublicUsers = async (query: GitHubUserQuery) => {
-  if (DEBUG) logDebug("getGitHubPublicUsers");
+  debug.functionCalled("getGitHubPublicUsers");
   return await request({
     integrationEndpoint: false,
     endpoint: `github-public/users${query ? `?${qs.stringify(query)}` : ""}`,
@@ -43,7 +41,7 @@ export const getGitHubPublicUsers = async (query: GitHubUserQuery) => {
 
 // getBasicBCeIDUser - Get Basic BCeID user by guid.
 export const getBasicBCeIDUser = async (guid: string) => {
-  if (DEBUG) logDebug("getBasicBCeIDUser");
+  debug.functionCalled("getBasicBCeIDUser");
   return await request({
     integrationEndpoint: false,
     endpoint: `basic-bceid/users?guid=${guid}`,
@@ -52,7 +50,7 @@ export const getBasicBCeIDUser = async (guid: string) => {
 
 // getBusinessBCeIDUser - Get Business BCeID user by guid.
 export const getBusinessBCeIDUser = async (guid: string) => {
-  if (DEBUG) logDebug("getBusinessBCeIDUser");
+  debug.functionCalled("getBusinessBCeIDUser");
   return await request({
     integrationEndpoint: false,
     endpoint: `business-bceid/users?guid=${guid}`,
@@ -61,7 +59,7 @@ export const getBusinessBCeIDUser = async (guid: string) => {
 
 // getBothBCeIDUser - Get Basic or Business BCeID user by guid.
 export const getBothBCeIDUser = async (guid: string) => {
-  if (DEBUG) logDebug("getBothBCeIDUser");
+  debug.functionCalled("getBothBCeIDUser");
   return await request({
     integrationEndpoint: false,
     endpoint: `basic-business-bceid/users?guid=${guid}`,
