@@ -1,26 +1,18 @@
 {
-  "name": "@bcgov/citz-imb-kc-css-api",
-  "version": "1.4.0",
-  "description": "BCGov Pathfinder CSS SSO API integration.",
-  "author": "Brady Mitchell <braden.mitchell@gov.bc.ca>",
+  "name": "@bcgov/citz-imb-sso-css-api",
+  "version": "1.0.0-alpha1",
+  "description": "BCGov SSO CSS API integration.",
+  "author": "CITZ IMB Common Code <citz.codemvp@gov.bc.ca>",
   "license": "Apache-2.0",
   "main": "build/index.js",
   "types": "build/bundle.d.ts",
-  "//": [
-    "THIS IS A COMMENT: Explanation of below scripts.",
-    "'build' will compile all src code into a bundle in build/ directory.",
-    "'build:dts' is part of 'build' and it bundles the typescipt declarations into a single bundle.d.ts file.",
-    "'clean:prebuild' is part of build and it removes directories and files before the build.",
-    "'clean:postbuild' is part of build and it removes directories and files after the build.",
-    "'pack' is used to package the code before a release.",
-    "'prepare' is automatically used to set up husky git hooks after an npm install"
-  ],
+  "//": "**NOTE**: See README for descriptions of each script.",
   "scripts": {
     "build": "npm run clean:prebuild && rollup -c rollup.config.mjs && npm run build:dts && npm run clean:postbuild",
     "build:dts": "rollup -c rollupdts.config.mjs && node scripts/remove-dts-files.mjs",
     "clean:prebuild": "rm -rf .rollup.cache build tsconfig.tsbuildinfo",
     "clean:postbuild": "node scripts/remove-empty-dirs.mjs && rm -rf .rollup.cache tsconfig.tsbuildinfo",
-    "pack": "npm i && npm run build && npm cache clean --force && npm pack && mkdir releases && mv *.tgz ./releases/",
+    "pack": "rm -rf releases && npm i && npm run build && npm cache clean --force && npm pack && mkdir releases && mv *.tgz ./releases/",
     "prepare": "husky"
   },
   "dependencies": {
@@ -46,9 +38,11 @@
     "css",
     "api",
     "oidc",
+    "oauth",
     "single sign on",
     "pathfinder",
-    "redhat",
+    "idir",
+    "bceid",
     "express",
     "npm"
   ],
@@ -57,9 +51,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bcgov/citz-imb-kc-css-api.git"
+    "url": "git+https://github.com/bcgov/citz-imb-sso-css-api.git"
   },
   "bugs": {
-    "url": "https://github.com/bcgov/citz-imb-kc-css-api/issues"
+    "url": "https://github.com/bcgov/citz-imb-sso-css-api/issues"
   }
 }
