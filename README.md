@@ -60,9 +60,8 @@ Use the links below to help you understand the codebase better.
 [NPM Package]: https://www.npmjs.com/package/@bcgov/citz-imb-sso-css-api
 
 [CITZ IMB Common Code]: mailto:citz.codemvp@gov.bc.ca?subject=SSO%20Packages%20Support
-[Purpose and Benefits of This Package]: https://github.com/bcgov/citz-imb-sso-express/wiki/Purpose-and-Benefits-of-This-Package
 
 [Documentation]: https://github.com/bcgov/citz-imb-sso-css-api/wiki
-[Directory Structure]: https://github.com/bcgov/citz-imb-sso-css-api/wiki/12-Directory-Structure
-[Scripts]: https://github.com/bcgov/citz-imb-sso-css-api/wiki/13-Scripts
-[Publishing a New Release Version]: https://github.com/bcgov/citz-imb-sso-css-api/wiki/14-Publishing-a-New-Release-Version
+[Directory Structure]: https://github.com/bcgov/citz-imb-sso-css-api/wiki/08-Directory-Structure
+[Scripts]: https://github.com/bcgov/citz-imb-sso-css-api/wiki/09-Scripts
+[Publishing a New Release Version]: https://github.com/bcgov/citz-imb-sso-css-api/wiki/10-Publishing-a-New-Release-Version
