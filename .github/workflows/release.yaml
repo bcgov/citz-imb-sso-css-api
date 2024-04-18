@@ -1,7 +1,7 @@
 name: Create Release
 
 env:
-  PACKAGE-FILENAME: 'bcgov-citz-imb-kc-css-api'
+  PACKAGE-FILENAME: 'bcgov-citz-imb-sso-css-api'
   CHANGELOG: '' # Leave empty.
 
 on:
