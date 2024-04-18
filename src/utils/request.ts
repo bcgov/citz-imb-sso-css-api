@@ -1,7 +1,10 @@
 import { RequestParams } from "../types";
 import { retreiveToken } from "./token";
+import debug from "./debug";
+
 import config from "../config";
-const { SSO_INTEGRATION_ID, SSO_ENVIRONMENT, CSS_API_URL, DEBUG } = config;
+const { SSO_INTEGRATION_ID, SSO_ENVIRONMENT, CSS_API_URL, PACKAGE_NAME } =
+  config;
 
 export const request = async (params: RequestParams) => {
   try {
@@ -46,32 +49,17 @@ export const request = async (params: RequestParams) => {
           }
     );
 
-    // Log debug info.
-    if (DEBUG && !response.ok) {
-      const formattedResponse = {
-        ok: response.ok,
-        status: response.status,
-        statusText: response.statusText,
-        url: response.url,
-        headers: JSON.stringify(response.headers),
-      };
-      console.log(
-        `DEBUG: Request to ${endpoint} in 'citz-imb-kc-css-api': `,
-        formattedResponse
-      );
-    }
+    // Log debug info for a bad response or completed request.
+    debug.badResponse(endpoint, response);
+    debug.requestCompleted(endpoint, response.status);
 
     // Return json if 200 or 201 reponse, otherwise return text.
-    if (DEBUG)
-      console.log(
-        `DEBUG: Request to ${endpoint} in 'citz-imb-kc-css-api' completed with status ${response.status}`
-      );
     if ([200, 201].includes(response.status)) return await response.json();
     return await response.text();
   } catch (error) {
     // Something went wrong.
     console.error(
-      `Error in 'citz-imb-kc-css-api' request. Endpoint: ${params.endpoint}.`,
+      `Error in '${PACKAGE_NAME}' request. Endpoint: ${params.endpoint}.`,
       error
     );
   }

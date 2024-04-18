@@ -1,17 +1,15 @@
 import { request } from "./utils/request";
-import { logDebug } from "./utils/logDebug";
-import config from "./config";
-const { DEBUG } = config;
+import debug from "./utils/debug";
 
 // getRoles - Get all roles from integration.
 export const getRoles = async () => {
-  if (DEBUG) logDebug("getRoles");
+  debug.functionCalled("getRoles");
   return await request({ integrationEndpoint: true, endpoint: "roles" });
 };
 
 // createRole - Create a new role.
 export const createRole = async (roleName: string) => {
-  if (DEBUG) logDebug("createRole");
+  debug.functionCalled("createRole");
   return await request({
     integrationEndpoint: true,
     endpoint: "roles",
@@ -22,7 +20,7 @@ export const createRole = async (roleName: string) => {
 
 // getRole - Get role details.
 export const getRole = async (roleName: string) => {
-  if (DEBUG) logDebug("getRole");
+  debug.functionCalled("getRole");
   return await request({
     integrationEndpoint: true,
     endpoint: `roles/${roleName}`,
@@ -31,7 +29,7 @@ export const getRole = async (roleName: string) => {
 
 // updateRole - Update a role name.
 export const updateRole = async (roleName: string, newRoleName: string) => {
-  if (DEBUG) logDebug("updateRole");
+  debug.functionCalled("updateRole");
   return await request({
     integrationEndpoint: true,
     endpoint: `roles/${roleName}`,
@@ -42,7 +40,7 @@ export const updateRole = async (roleName: string, newRoleName: string) => {
 
 // deleteRole - Remove a role.
 export const deleteRole = async (roleName: string) => {
-  if (DEBUG) logDebug("deleteRole");
+  debug.functionCalled("deleteRole");
   return await request({
     integrationEndpoint: true,
     endpoint: `roles/${roleName}`,
@@ -52,7 +50,7 @@ export const deleteRole = async (roleName: string) => {
 
 // getRoleComposites - Get a role's composites.
 export const getRoleComposites = async (roleName: string) => {
-  if (DEBUG) logDebug("getRoleComposites");
+  debug.functionCalled("getRoleComposites");
   return await request({
     integrationEndpoint: true,
     endpoint: `roles/${roleName}/composite-roles`,
@@ -64,7 +62,7 @@ export const addRoleComposite = async (
   roleName: string,
   newCompositeRole: string
 ) => {
-  if (DEBUG) logDebug("addRoleComposite");
+  debug.functionCalled("addRoleComposite");
   return await request({
     integrationEndpoint: true,
     endpoint: `roles/${roleName}/composite-roles`,
@@ -78,7 +76,7 @@ export const getRoleComposite = async (
   roleName: string,
   compositeRoleName: string
 ) => {
-  if (DEBUG) logDebug("getRoleComposite");
+  debug.functionCalled("getRoleComposite");
   return await request({
     integrationEndpoint: true,
     endpoint: `roles/${roleName}/composite-roles/${compositeRoleName}`,
@@ -90,7 +88,7 @@ export const deleteRoleComposite = async (
   roleName: string,
   compositeRoleName: string
 ) => {
-  if (DEBUG) logDebug("deleteRoleComposite");
+  debug.functionCalled("deleteRoleComposite");
   return await request({
     integrationEndpoint: true,
     endpoint: `roles/${roleName}/composite-roles/${compositeRoleName}`,

@@ -1,7 +1,10 @@
-import config from "../config";
-const { CSS_API_CLIENT_ID, CSS_API_CLIENT_SECRET, CSS_API_URL, DEBUG } = config;
+import debug from "./debug";
 
-// Retrieves a token from Keycloak
+import config from "../config";
+const { CSS_API_CLIENT_ID, CSS_API_CLIENT_SECRET, CSS_API_URL, PACKAGE_NAME } =
+  config;
+
+// Retrieves a token from SSO
 export const retreiveToken = async () => {
   try {
     const body = {
@@ -25,24 +28,12 @@ export const retreiveToken = async () => {
     const data = await response.text();
     const access_token = JSON.parse(data).access_token;
 
-    // Log debug info.
-    if (DEBUG && !response.ok) {
-      const formattedResponse = {
-        ok: response.ok,
-        status: response.status,
-        statusText: response.statusText,
-        url: response.url,
-        headers: JSON.stringify(response.headers),
-      };
-      console.error(
-        `DEBUG: retreiveToken in 'citz-imb-kc-css-api': `,
-        formattedResponse
-      );
-    }
+    // Log debug info for a bad response.
+    debug.badTokenResponse(response);
 
     return access_token;
   } catch (error) {
     // Something went wrong.
-    console.error(`Error in retrieveToken of 'citz-imb-kc-css-api'.`, error);
+    console.error(`Error in retrieveToken of '${PACKAGE_NAME}'.`, error);
   }
 };
