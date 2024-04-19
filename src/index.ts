@@ -1,5 +1,5 @@
 // Integration
-export { getIntegration } from "./integration";
+export { getIntegration } from './integration';
 
 // Roles
 export {
@@ -12,7 +12,7 @@ export {
   addRoleComposite, // Add a composite to a role.
   getRoleComposite, // Get a composite role from a role.
   deleteRoleComposite, // Remove a composite role from a role.
-} from "./roles";
+} from './roles';
 
 // Role-Mapping
 export {
@@ -20,7 +20,7 @@ export {
   assignUserRoles, // Assign roles to a user.
   getUsersWithRole, // Get users associated with a role.
   unassignUserRole, // Unassign a role from a user.
-} from "./roleMapping";
+} from './roleMapping';
 
 // Users
 export {
@@ -31,4 +31,4 @@ export {
   getBasicBCeIDUser, // Get Basic BCeID user by guid.
   getBusinessBCeIDUser, // Get Business BCeID user by guid.
   getBothBCeIDUser, // Get Basic or Business BCeID user by guid.
-} from "./users";
+} from './users';

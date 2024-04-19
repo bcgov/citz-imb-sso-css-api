@@ -1,10 +1,10 @@
-import { RequestBody } from "./types";
-import { request } from "./utils/request";
-import debug from "./utils/debug";
+import { RequestBody } from './types';
+import { request } from './utils/request';
+import debug from './utils/debug';
 
 // getUserRoles - Get roles associated with a user.
 export const getUserRoles = async (username: string) => {
-  debug.functionCalled("getUserRoles");
+  debug.functionCalled('getUserRoles');
   return await request({
     integrationEndpoint: true,
     endpoint: `users/${username}/roles`,
@@ -12,15 +12,12 @@ export const getUserRoles = async (username: string) => {
 };
 
 // assignUserRoles - Assign roles to a user.
-export const assignUserRoles = async (
-  username: string,
-  roleNames: string[]
-) => {
-  debug.functionCalled("assignUserRoles");
+export const assignUserRoles = async (username: string, roleNames: string[]) => {
+  debug.functionCalled('assignUserRoles');
   return await request({
     integrationEndpoint: true,
     endpoint: `users/${username}/roles`,
-    method: "POST",
+    method: 'POST',
     body:
       (roleNames.map((roleName) => ({
         name: roleName,
@@ -29,26 +26,22 @@ export const assignUserRoles = async (
 };
 
 // getUsersWithRole - Get users associated with a role.
-export const getUsersWithRole = async (
-  roleName: string,
-  page?: number,
-  maxCount?: number
-) => {
-  debug.functionCalled("getUsersWithRole");
+export const getUsersWithRole = async (roleName: string, page?: number, maxCount?: number) => {
+  debug.functionCalled('getUsersWithRole');
   return await request({
     integrationEndpoint: true,
     endpoint: `roles/${roleName}/users${
-      page ? `?page=${page}${maxCount ? `&max=${maxCount}` : ""}` : ""
+      page ? `?page=${page}${maxCount ? `&max=${maxCount}` : ''}` : ''
     }`,
   });
 };
 
 // unassignUserRole - Unassign a role from a user.
 export const unassignUserRole = async (username: string, roleName: string) => {
-  debug.functionCalled("unassignUserRole");
+  debug.functionCalled('unassignUserRole');
   return await request({
     integrationEndpoint: true,
     endpoint: `users/${username}/roles/${roleName}`,
-    method: "DELETE",
+    method: 'DELETE',
   });
 };
