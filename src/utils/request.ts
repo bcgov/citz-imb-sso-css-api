@@ -2,8 +2,8 @@ import { RequestParams } from '../types';
 import { retreiveToken } from './token';
 import debug from './debug';
 
-import config from '../config';
-const { SSO_INTEGRATION_ID, SSO_ENVIRONMENT, CSS_API_URL, PACKAGE_NAME } = config;
+import CONFIG from '../config';
+const { SSO_INTEGRATION_ID, SSO_ENVIRONMENT, CSS_API_URL, PACKAGE_NAME } = CONFIG;
 
 export const request = async (params: RequestParams) => {
   try {
