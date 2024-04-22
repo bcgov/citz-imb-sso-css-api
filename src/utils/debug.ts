@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import config from '../config';
-const { DEBUG, VERBOSE_DEBUG, PACKAGE_NAME } = config;
+import CONFIG from '../config';
+const { DEBUG, VERBOSE_DEBUG, PACKAGE_NAME } = CONFIG;
 
 const functionCalled = (funcName: string) => {
   if (DEBUG) console.log(`DEBUG: ${funcName} function in '${PACKAGE_NAME}' called.`);

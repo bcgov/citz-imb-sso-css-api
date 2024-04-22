@@ -1,10 +1,15 @@
 import qs from 'querystring';
-import { GitHubUserQuery, IDIRUserQuery } from './types';
+import { GetUsersWithRoleResponse, GitHubUserQuery, IDIRUserQuery } from './types';
 import { request } from './utils/request';
 import debug from './utils/debug';
 
-// getIDIRUsers - Get list of IDIR users by query.
-export const getIDIRUsers = async (query: IDIRUserQuery) => {
+/**
+ * Get list of IDIR users by query.
+ * @param {IDIRUserQuery} query - User details to search for.
+ * @returns {Promise<GetUsersWithRoleResponse>}
+ * @example getIDIRUsers({ firstName: 'Joe' });
+ */
+export const getIDIRUsers = async (query: IDIRUserQuery): Promise<GetUsersWithRoleResponse> => {
   debug.functionCalled('getIDIRUsers');
   return await request({
     integrationEndpoint: false,
@@ -12,8 +17,15 @@ export const getIDIRUsers = async (query: IDIRUserQuery) => {
   });
 };
 
-// getAzureIDIRUsers - Get list of Azure IDIR users by query.
-export const getAzureIDIRUsers = async (query: IDIRUserQuery) => {
+/**
+ * Get list of Azure IDIR users by query.
+ * @param {IDIRUserQuery} query - User details to search for.
+ * @returns {Promise<GetUsersWithRoleResponse>}
+ * @example getAzureIDIRUsers({ firstName: 'Joe' });
+ */
+export const getAzureIDIRUsers = async (
+  query: IDIRUserQuery,
+): Promise<GetUsersWithRoleResponse> => {
   debug.functionCalled('getAzureIDIRUsers');
   return await request({
     integrationEndpoint: false,
@@ -21,8 +33,15 @@ export const getAzureIDIRUsers = async (query: IDIRUserQuery) => {
   });
 };
 
-// getGitHubBCGovUsers - Get list of GitHub BCGov users by query.
-export const getGitHubBCGovUsers = async (query: GitHubUserQuery) => {
+/**
+ * Get list of GitHub BCGov users by query.
+ * @param {GitHubUserQuery} query - User details to search for.
+ * @returns {Promise<GetUsersWithRoleResponse>}
+ * @example getGitHubBCGovUsers({ login: 'JoeGatto' });
+ */
+export const getGitHubBCGovUsers = async (
+  query: GitHubUserQuery,
+): Promise<GetUsersWithRoleResponse> => {
   debug.functionCalled('getGitHubBCGovUsers');
   return await request({
     integrationEndpoint: false,
@@ -30,8 +49,15 @@ export const getGitHubBCGovUsers = async (query: GitHubUserQuery) => {
   });
 };
 
-// getGitHubPublicUsers - Get list of GitHub Public users by query.
-export const getGitHubPublicUsers = async (query: GitHubUserQuery) => {
+/**
+ * Get list of GitHub Public users by query.
+ * @param {GitHubUserQuery} query - User details to search for.
+ * @returns {Promise<GetUsersWithRoleResponse>}
+ * @example getGitHubPublicUsers({ login: 'JoeGatto' });
+ */
+export const getGitHubPublicUsers = async (
+  query: GitHubUserQuery,
+): Promise<GetUsersWithRoleResponse> => {
   debug.functionCalled('getGitHubPublicUsers');
   return await request({
     integrationEndpoint: false,
@@ -39,8 +65,13 @@ export const getGitHubPublicUsers = async (query: GitHubUserQuery) => {
   });
 };
 
-// getBasicBCeIDUser - Get Basic BCeID user by guid.
-export const getBasicBCeIDUser = async (guid: string) => {
+/**
+ * Get Basic BCeID user by guid.
+ * @param {string} guid - User identifier.
+ * @returns {Promise<GetUsersWithRoleResponse>}
+ * @example getBasicBCeIDUser('1r1zui4qr1yfh73k6rku5q30qupgcvdt');
+ */
+export const getBasicBCeIDUser = async (guid: string): Promise<GetUsersWithRoleResponse> => {
   debug.functionCalled('getBasicBCeIDUser');
   return await request({
     integrationEndpoint: false,
@@ -48,8 +79,13 @@ export const getBasicBCeIDUser = async (guid: string) => {
   });
 };
 
-// getBusinessBCeIDUser - Get Business BCeID user by guid.
-export const getBusinessBCeIDUser = async (guid: string) => {
+/**
+ * Get Business BCeID user by guid.
+ * @param {string} guid - User identifier.
+ * @returns {Promise<GetUsersWithRoleResponse>}
+ * @example getBusinessBCeIDUser('1r1zui4qr1yfh73k6rku5q30qupgcvdt');
+ */
+export const getBusinessBCeIDUser = async (guid: string): Promise<GetUsersWithRoleResponse> => {
   debug.functionCalled('getBusinessBCeIDUser');
   return await request({
     integrationEndpoint: false,
@@ -57,8 +93,13 @@ export const getBusinessBCeIDUser = async (guid: string) => {
   });
 };
 
-// getBothBCeIDUser - Get Basic or Business BCeID user by guid.
-export const getBothBCeIDUser = async (guid: string) => {
+/**
+ * Get Both BCeID user by guid.
+ * @param {string} guid - User identifier.
+ * @returns {Promise<GetUsersWithRoleResponse>}
+ * @example getBothBCeIDUser('1r1zui4qr1yfh73k6rku5q30qupgcvdt');
+ */
+export const getBothBCeIDUser = async (guid: string): Promise<GetUsersWithRoleResponse> => {
   debug.functionCalled('getBothBCeIDUser');
   return await request({
     integrationEndpoint: false,
