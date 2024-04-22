@@ -1,37 +1,35 @@
-import { RequestParams } from "../types";
-import { retreiveToken } from "./token";
-import debug from "./debug";
+import { RequestParams } from '../types';
+import { retreiveToken } from './token';
+import debug from './debug';
 
-import config from "../config";
-const { SSO_INTEGRATION_ID, SSO_ENVIRONMENT, CSS_API_URL, PACKAGE_NAME } =
-  config;
+import config from '../config';
+const { SSO_INTEGRATION_ID, SSO_ENVIRONMENT, CSS_API_URL, PACKAGE_NAME } = config;
 
 export const request = async (params: RequestParams) => {
   try {
     const {
       integrationEndpoint = false,
       environmentEndpoint = true,
-      endpoint = "",
-      method = "GET",
+      endpoint = '',
+      method = 'GET',
       body,
     } = params;
 
     // Get token.
     const access_token = await retreiveToken();
-    if (!access_token)
-      throw new Error("No access token provided by retrieveToken().");
+    if (!access_token) throw new Error('No access token provided by retrieveToken().');
 
     // Create headers.
     const headers = {
       Authorization: `Bearer ${access_token}`,
-      Accept: "application/json",
-      "Content-Type": "application/json",
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
     };
 
     // Create request url.
     const integration = `integrations/${SSO_INTEGRATION_ID}/`;
-    const url = `${CSS_API_URL}/${integrationEndpoint ? integration : ""}${
-      environmentEndpoint ? `${SSO_ENVIRONMENT}/` : ""
+    const url = `${CSS_API_URL}/${integrationEndpoint ? integration : ''}${
+      environmentEndpoint ? `${SSO_ENVIRONMENT}/` : ''
     }${endpoint}`;
 
     // Fetch request.
@@ -46,7 +44,7 @@ export const request = async (params: RequestParams) => {
         : {
             method,
             headers,
-          }
+          },
     );
 
     // Log debug info for a bad response or completed request.
@@ -58,9 +56,6 @@ export const request = async (params: RequestParams) => {
     return await response.text();
   } catch (error) {
     // Something went wrong.
-    console.error(
-      `Error in '${PACKAGE_NAME}' request. Endpoint: ${params.endpoint}.`,
-      error
-    );
+    console.error(`Error in '${PACKAGE_NAME}' request. Endpoint: ${params.endpoint}.`, error);
   }
 };

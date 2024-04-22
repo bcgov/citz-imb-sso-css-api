@@ -1,26 +1,23 @@
-import debug from "./debug";
+import debug from './debug';
 
-import config from "../config";
-const { CSS_API_CLIENT_ID, CSS_API_CLIENT_SECRET, CSS_API_URL, PACKAGE_NAME } =
-  config;
+import config from '../config';
+const { CSS_API_CLIENT_ID, CSS_API_CLIENT_SECRET, CSS_API_URL, PACKAGE_NAME } = config;
 
 // Retrieves a token from SSO
 export const retreiveToken = async () => {
   try {
     const body = {
-      grant_type: "client_credentials",
+      grant_type: 'client_credentials',
     };
 
     const headers = {
-      Authorization: `Basic ${btoa(
-        `${CSS_API_CLIENT_ID}:${CSS_API_CLIENT_SECRET}`
-      )}`,
-      Accept: "application/json",
-      "Content-Type": "application/json",
+      Authorization: `Basic ${btoa(`${CSS_API_CLIENT_ID}:${CSS_API_CLIENT_SECRET}`)}`,
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
     };
 
     const response = await fetch(`${CSS_API_URL}/token`, {
-      method: "POST",
+      method: 'POST',
       headers,
       body: JSON.stringify(body),
     });

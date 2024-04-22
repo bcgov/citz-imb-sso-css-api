@@ -1,15 +1,15 @@
-import config from "../config";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import config from '../config';
 const { DEBUG, VERBOSE_DEBUG, PACKAGE_NAME } = config;
 
 const functionCalled = (funcName: string) => {
-  if (DEBUG)
-    console.log(`DEBUG: ${funcName} function in '${PACKAGE_NAME}' called.`);
+  if (DEBUG) console.log(`DEBUG: ${funcName} function in '${PACKAGE_NAME}' called.`);
 };
 
 const requestCompleted = (endpoint: string, status: number) => {
   if (DEBUG)
     console.log(
-      `DEBUG: Request to ${endpoint} in '${PACKAGE_NAME}' completed with status ${status}`
+      `DEBUG: Request to ${endpoint} in '${PACKAGE_NAME}' completed with status ${status}`,
     );
 };
 
@@ -22,10 +22,7 @@ const badResponse = (endpoint: string, response: any) => {
       url: response.url,
       headers: JSON.stringify(response.headers),
     };
-    console.log(
-      `DEBUG: Request to ${endpoint} in '${PACKAGE_NAME}': `,
-      formattedResponse
-    );
+    console.log(`DEBUG: Request to ${endpoint} in '${PACKAGE_NAME}': `, formattedResponse);
   }
 };
 
@@ -38,10 +35,7 @@ const badTokenResponse = (response: any) => {
       url: response.url,
       headers: JSON.stringify(response.headers),
     };
-    console.log(
-      `DEBUG: retreiveToken in '${PACKAGE_NAME}': `,
-      formattedResponse
-    );
+    console.log(`DEBUG: retreiveToken in '${PACKAGE_NAME}': `, formattedResponse);
   }
 };
 
