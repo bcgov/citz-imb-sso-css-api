@@ -1,11 +1,15 @@
 import { request } from './utils/request';
 import debug from './utils/debug';
 
-import config from './config';
-const { SSO_INTEGRATION_ID } = config;
+import CONFIG from './config';
+import { GetIntegrationResponse } from './types';
+const { SSO_INTEGRATION_ID } = CONFIG;
 
-// getIntegration - Get integration details.
-export const getIntegration = async () => {
+/**
+ * Get integration details.
+ * @returns {Promise<GetIntegrationResponse>}
+ */
+export const getIntegration = async (): Promise<GetIntegrationResponse> => {
   debug.functionCalled('getIntegration');
   return await request({
     environmentEndpoint: false,

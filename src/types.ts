@@ -25,3 +25,43 @@ export type GitHubUserQuery = {
   email?: string;
   guid?: string;
 };
+
+export type RoleResponse = {
+  name: string;
+  composite: boolean;
+};
+
+export type RoleResponseWithoutComposite = {
+  name: string;
+};
+
+export type RolesArrayResponse = {
+  data: RoleResponse[];
+};
+
+export type RolesArrayWithoutCompositeResponse = {
+  data: RoleResponseWithoutComposite[];
+};
+
+export type UserResponse = {
+  username: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  attributes: unknown;
+};
+
+export type GetUsersWithRoleResponse = {
+  page?: number;
+  data: UserResponse[];
+};
+
+export type GetIntegrationResponse = {
+  id: number;
+  projectName: string;
+  authType: string;
+  environments: string;
+  status: string;
+  createdAt: string;
+  updatedAt: string;
+};
