@@ -9,7 +9,7 @@
 
 # `Introduction`
 
-This npm package offers the [CSS API Account] functionality through easy to use functions in your NodeJS application. The [CSS API Account] is part of the B.C. government's Single Sign-On SSO ([CSS]) service. The endpoints outlined in the [CSS API Swagger Docs] will have a corresponding functions in this package.
+This npm package offers the [CSS API Account] functionality through easy to use functions in your NodeJS application. The [CSS API Account] is part of the B.C. government's Single Sign-On ([CSS]) service. The endpoints outlined in the [CSS API Swagger Docs] will have a corresponding functions in this package.
 
 The [CSS API Account] let's you interact with [CSS] Application for your SSO Integration in a RESTful way for both user and role management.
 
@@ -20,13 +20,17 @@ The [CSS API Account] let's you interact with [CSS] Application for your SSO Int
 
 <br />
 
+[![GitHub release](https://img.shields.io/github/v/release/bcgov/citz-imb-sso-css-api.svg)](https://GitHub.com/bcgov/citz-imb-sso-css-api/releases/)  
+[![Npm package total downloads](https://badgen.net/npm/dt/@bcgov/citz-imb-sso-css-api)](https://www.npmjs.com/package/@bcgov/citz-imb-sso-css-api)  
+[![GitHub stars](https://img.shields.io/github/stars/bcgov/citz-imb-sso-css-api.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/bcgov/citz-imb-sso-css-api/stargazers/)  
+
 ### `Get Started Here!`
 
 [Documentation] - `Installation, setup and usage guides.`
 
 <br />
 
-> [!IMPORTANT] 
+> ### `IMPORTANT`
 > This package complements, rather than replicates, Common Hosted Single Sign-On ([CSS]).  
 > It allows our own applications to make use of the [CSS API Account] in an easy to consume way.  
 > It is developed and maintained by the [CITZ IMB Common Code] team, separate from the Common Hosted Single Sign-On ([CSS]) team.  
