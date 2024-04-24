@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import CONFIG from '../config';
+import CONFIG from 'src/config';
 const { DEBUG, VERBOSE_DEBUG, PACKAGE_NAME } = CONFIG;
 
 const functionCalled = (funcName: string) => {
@@ -35,7 +35,7 @@ const badTokenResponse = (response: any) => {
       url: response.url,
       headers: JSON.stringify(response.headers),
     };
-    console.log(`DEBUG: retreiveToken in '${PACKAGE_NAME}': `, formattedResponse);
+    console.log(`DEBUG: retrieveToken in '${PACKAGE_NAME}': `, formattedResponse);
   }
 };
 
