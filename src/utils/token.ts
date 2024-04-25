@@ -1,10 +1,10 @@
 import debug from './debug';
 
-import config from '../config';
-const { CSS_API_CLIENT_ID, CSS_API_CLIENT_SECRET, CSS_API_URL, PACKAGE_NAME } = config;
+import CONFIG from 'src/config';
+const { CSS_API_CLIENT_ID, CSS_API_CLIENT_SECRET, CSS_API_URL, PACKAGE_NAME } = CONFIG;
 
 // Retrieves a token from SSO
-export const retreiveToken = async () => {
+export const retrieveToken = async () => {
   try {
     const body = {
       grant_type: 'client_credentials',

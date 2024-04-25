@@ -1,5 +1,5 @@
 import { RequestParams } from '../types';
-import { retreiveToken } from './token';
+import { retrieveToken } from './token';
 import debug from './debug';
 
 import CONFIG from '../config';
@@ -16,7 +16,7 @@ export const request = async (params: RequestParams) => {
     } = params;
 
     // Get token.
-    const access_token = await retreiveToken();
+    const access_token = await retrieveToken();
     if (!access_token) throw new Error('No access token provided by retrieveToken().');
 
     // Create headers.
