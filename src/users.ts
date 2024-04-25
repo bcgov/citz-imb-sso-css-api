@@ -13,7 +13,7 @@ export const getIDIRUsers = async (query: IDIRUserQuery): Promise<GetUsersWithRo
   debug.functionCalled('getIDIRUsers');
   return await request({
     integrationEndpoint: false,
-    endpoint: `idir/users${query ? `?${qs.stringify(query)}` : ''}`,
+    endpoint: `idir/users?${qs.stringify(query)}`,
   });
 };
 
@@ -29,7 +29,7 @@ export const getAzureIDIRUsers = async (
   debug.functionCalled('getAzureIDIRUsers');
   return await request({
     integrationEndpoint: false,
-    endpoint: `azure-idir/users${query ? `?${qs.stringify(query)}` : ''}`,
+    endpoint: `azure-idir/users?${qs.stringify(query)}`,
   });
 };
 
@@ -45,7 +45,7 @@ export const getGitHubBCGovUsers = async (
   debug.functionCalled('getGitHubBCGovUsers');
   return await request({
     integrationEndpoint: false,
-    endpoint: `github-bcgov/users${query ? `?${qs.stringify(query)}` : ''}`,
+    endpoint: `github-bcgov/users?${qs.stringify(query)}`,
   });
 };
 
@@ -61,7 +61,7 @@ export const getGitHubPublicUsers = async (
   debug.functionCalled('getGitHubPublicUsers');
   return await request({
     integrationEndpoint: false,
-    endpoint: `github-public/users${query ? `?${qs.stringify(query)}` : ''}`,
+    endpoint: `github-public/users?${qs.stringify(query)}`,
   });
 };
 
