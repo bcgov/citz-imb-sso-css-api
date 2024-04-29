@@ -26,7 +26,7 @@ export const getUserRoles = async (username: string): Promise<RolesArrayResponse
  * @param {string} username - Username of the user to assign roles to.
  * @param {string[]} roleNames - Array of roles to assign.
  * @returns {Promise<RolesArrayWithoutCompositeResponse>}
- * @example assignUserRoles('fohe4m5pn8clhkxmlho33sn1r7vr7m67@idir', 'admin');
+ * @example assignUserRoles('fohe4m5pn8clhkxmlho33sn1r7vr7m67@idir', ['admin']);
  */
 export const assignUserRoles = async (
   username: string,
@@ -37,10 +37,9 @@ export const assignUserRoles = async (
     integrationEndpoint: true,
     endpoint: `users/${username}/roles`,
     method: 'POST',
-    body:
-      (roleNames.map((roleName) => ({
-        name: roleName,
-      })) as RequestBody) ?? [],
+    body: roleNames.map((roleName) => ({
+      name: roleName,
+    })) as RequestBody,
   });
 };
 
