@@ -1,0 +1,10 @@
+version: 1
+data_management_roles:
+  product_owner: Laura Benson
+product_information:
+  ministry: CITZ
+  product_acronym: 
+  product_description: An npm package that offers the Common Hosted Single Sign-on API Account as functions, allowing SSO management through code instead of through the dashboard.
+  product_name: citz-imb-sso-css-api
+product_technology_information:
+  hosting_platforms: Not-Applicable
