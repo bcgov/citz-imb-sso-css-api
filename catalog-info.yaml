@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: citz-imb-sso-css-api-(npm-package)
+  name: citz-imb-sso-css-api-npm-package
   title: CITZ IMB SSO CSS API (NPM Package)
   description: An npm package that offers the Common Hosted Single Sign-on API
     Account as functions, allowing SSO management through code instead of
