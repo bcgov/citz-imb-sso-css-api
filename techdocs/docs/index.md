@@ -12,7 +12,7 @@ This npm package offers the CSS (Common Hosted Single Sign-on) API Account funct
 <br />
 
 !!! warning "Important"
-    This package complements, rather than replicates, Common Hosted Single Sign-On ([CSS]).  
+    This package leverages, rather than replicates, Common Hosted Single Sign-On ([CSS]) CSS API Account.  
     It allows our own applications to make use of the [CSS API Account] in an easy to consume way.  
     It is developed and maintained by the [CITZ IMB Common Code] team, separate from the Common Hosted Single Sign-On ([CSS]) team.
 
