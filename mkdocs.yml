@@ -1,0 +1,21 @@
+site_name: 'CITZ IMB SSO CSS API (NPM Package)'
+site_description: 'An npm package that offers the Common Hosted Single Sign-on API Account as functions, allowing SSO management through code instead of through the dashboard.'
+docs_dir: 'techdocs/docs'
+repo_url: 'https://github.com/bcgov/citz-imb-sso-css-api'
+edit_uri: edit/main/techdocs/docs
+nav:
+  - Introduction: index.md
+  - Getting Started:
+      - Installing the Package: getting-started/installing-the-package.md
+      - Quick Start Guide: getting-started/quick-start-guide.md
+      - Environment Variables: getting-started/environment-variables.md
+      - SSO Settings & CSS API Account: getting-started/sso-settings.md
+  - Using the Package:
+      - Module Exports: using-the-package/module-exports.md
+      - TypeScript Types: using-the-package/typescript-types.md
+      - Troubleshooting: using-the-package/troubleshooting.md
+plugins:
+  - techdocs-core
+  - git-revision-date-localized
+markdown_extensions:
+  - md_in_html
