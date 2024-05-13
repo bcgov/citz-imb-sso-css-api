@@ -22,8 +22,8 @@ If you can't resolve the problem yourself, open a [Bug Report](https://github.co
 
 ### Function Results in a `Promise { <pending> }`
 
-Each of the functions provided by this package is asynchronous. This means that the function will run in the background without blocking other events from running, and then once the funtion has completed, it will return the result.
+Each of the functions provided by this package are asynchronous. This means that the function will run in the background without blocking other events from running, and then once the funtion has completed, it will return the result.
 
 If the function you are trying to use is returning `Promise { <pending> }` it is because you are not awaiting the result of the async function.
 
-Make sure your call to the function is within an async function or that async functions can be awaited at the top level of your file, and that the function is proceeded by the `await` keyword.
+Make sure your call to the function is within an `async` function or that async functions can be awaited at the top level of your file, and that the function is proceeded by the `await` keyword.
