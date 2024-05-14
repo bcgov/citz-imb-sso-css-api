@@ -26,4 +26,13 @@ Each of the functions provided by this package are asynchronous. This means that
 
 If the function you are trying to use is returning `Promise { <pending> }` it is because you are not awaiting the result of the async function.
 
-Make sure your call to the function is within an `async` function or that async functions can be awaited at the top level of your file, and that the function is proceeded by the `await` keyword.
+Make sure your call to the function is within an `async` function or that async functions can be awaited at the top level of your file, and that the function is proceeded by the `await` keyword. Alternatively, you can use the promise chaining syntax such as `getIntegration().then(result => console.log(result));`
+
+If you wish to resolve multiple functions at once, an option is to use `Promise.all` like in the example below:
+
+```JavaScript
+const [integration, roles] = await Promise.all([
+  getIntegration(),
+  getRoles()
+]);
+```
