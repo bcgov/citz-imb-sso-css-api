@@ -2,6 +2,8 @@
 
 These are the functions and types exported by the package.
 
+Functions are modeled after the API endpoints of the [CSS Swagger Docs].
+
 ```JavaScript
 import {
   getIntegration, // Get integration details.
@@ -33,3 +35,6 @@ import {
   GitHubUserQuery, // Query type when using getGitHubBCGovUsers or getGitHubPublicUsers.
 } from '@bcgov/citz-imb-sso-css-api';
 ```
+
+<!-- Reference links -->
+[CSS Swagger Docs]: https://api.loginproxy.gov.bc.ca/openapi/swagger

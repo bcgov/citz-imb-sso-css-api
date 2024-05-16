@@ -4,7 +4,7 @@
 
 This npm package offers the CSS (Common Hosted Single Sign-on) API Account functionality through easy to use functions in your NodeJS application. The CSS API Account is part of the B.C. government's Single Sign-On SSO (CSS) service and is used to manage your SSO integrations through code instead of through the dashboard. This can be used to add or remove user roles and much more. Endpoints in the CSS API are offered as JavaScript functions in this package.
 
-- Built for a NodeJS:20 React app.
+- Built for a NodeJS:20.
 - For [CSS] Teams with a [CSS API Account].
 - Works with Vanilla JavaScript or TypeScript 5.
 - Built for standalone use. Does NOT require [@bcgov/citz-imb-sso-react] or [@bcgov/citz-imb-sso-express]
