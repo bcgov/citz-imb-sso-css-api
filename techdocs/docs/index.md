@@ -19,12 +19,15 @@ This npm package offers the CSS (Common Hosted Single Sign-on) API Account funct
 !!! tip "Tip"
     If you don't have a [CSS API Account] check out [SSO Settings & CSS API Account](./getting-started/sso-settings.md).
 
+!!! info "Info"
+    You can view our [Package Management Plan] that outlines how we manage our suite of npm packages.  
+    This includes topics such as versioning strategy, support lifecycle, documentation standards and more.
+
 <!-- Link References -->
 [CSS]: https://bcgov.github.io/sso-requests
 [CSS API Account]: https://github.com/bcgov/sso-keycloak/wiki/CSS-API-Account
-
 [@bcgov/citz-imb-sso-react]: https://github.com/bcgov/citz-imb-sso-react
 [@bcgov/citz-imb-sso-express]: https://github.com/bcgov/citz-imb-sso-express
-
 [NPM Package]: https://www.npmjs.com/package/@bcgov/citz-imb-sso-css-api
 [CITZ IMB Common Code]: mailto:citz.codemvp@gov.bc.ca?subject=SSO%20Packages%20Support
+[Package Management Plan]: https://citz-imb.atlassian.net/wiki/x/EgB4CQ
