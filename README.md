@@ -47,6 +47,7 @@ Use the links below to help you understand the codebase better.
 
 - [Directory Structure]
 - [Scripts]
+- [Package Management Plan]
 - [Publishing a New Release Version]
 
 <br />
@@ -68,4 +69,5 @@ Use the links below to help you understand the codebase better.
 [Documentation]: https://github.com/bcgov/citz-imb-sso-css-api/wiki
 [Directory Structure]: https://github.com/bcgov/citz-imb-sso-css-api/wiki/08-Directory-Structure
 [Scripts]: https://github.com/bcgov/citz-imb-sso-css-api/wiki/09-Scripts
-[Publishing a New Release Version]: https://github.com/bcgov/citz-imb-sso-css-api/wiki/10-Publishing-a-New-Release-Version
+[Publishing a New Release Version]: https://citz-imb.atlassian.net/l/cp/rj2F0y2n
+[Package Management Plan]: https://citz-imb.atlassian.net/l/cp/jcxjEmBf
