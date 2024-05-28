@@ -1,6 +1,6 @@
 {
   "name": "@bcgov/citz-imb-sso-css-api",
-  "version": "1.0.0-alpha1",
+  "version": "1.0.0",
   "description": "BCGov SSO CSS API integration.",
   "author": "CITZ IMB Common Code <citz.codemvp@gov.bc.ca>",
   "license": "Apache-2.0",
@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "25.0.7",
+    "@rollup/plugin-json": "6.1.0",
     "@rollup/plugin-multi-entry": "6.0.1",
     "@rollup/plugin-node-resolve": "15.2.3",
     "@rollup/plugin-typescript": "11.1.6",
