@@ -67,7 +67,7 @@ export const updateRole = async (
  * @returns No Content
  * @example deleteRole('admin');
  */
-export const deleteRole = async (roleName: string) => {
+export const deleteRole = async (roleName: string): Promise<void> => {
   debug.functionCalled('deleteRole');
   return await request({
     integrationEndpoint: true,
@@ -135,7 +135,10 @@ export const getRoleComposite = async (
  * @returns No Content
  * @example deleteRoleComposite('admin', 'admin-dashboard');
  */
-export const deleteRoleComposite = async (roleName: string, compositeRoleName: string) => {
+export const deleteRoleComposite = async (
+  roleName: string,
+  compositeRoleName: string,
+): Promise<void> => {
   debug.functionCalled('deleteRoleComposite');
   return await request({
     integrationEndpoint: true,
