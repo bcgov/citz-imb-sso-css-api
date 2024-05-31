@@ -33,6 +33,7 @@ jobs:
 
       # Install dependencies.
       - name: Install Dependencies and Run Coverage Report Generation
+        working-directory: ${{ github.workspace }}
         run: |
           npm i
           npm run coverage      
