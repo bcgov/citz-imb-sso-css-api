@@ -33,6 +33,7 @@ jobs:
 
       # Install dependencies.
       - name: Install Dependencies and Run Coverage Report Generation
+        working-directory: ${{ github.workspace }}
         run: |
           npm i
           npm run coverage      
@@ -40,7 +41,6 @@ jobs:
       # Use lcov to format coverage for Code Climate
       # -t is for coverage type
       - name: Format Test Coverage
-        working-directory: ${{ github.workspace }}
         run: |
           ./cc-test-reporter format-coverage ${{ github.workspace }}/coverage/lcov.info -t lcov --output ${{ github.workspace }}/coverage/sso-css-api-coverage.json
 
