@@ -1,6 +1,6 @@
 # getIntegration
 
-The `getIntegration` function is used to get details about your integration from CSS.
+The `getIntegration` function is used to get details about your integration from Common Hosted Single Sign-on service.
 
 !!! warning "Reminder"
     This function is asynchronous and must be awaited in order to get a response.
@@ -35,6 +35,8 @@ export const getProjectName = async () => {
 ```
 
 ### Response Type
+
+The type `GetIntegrationResponse` of `Promise<GetIntegrationResponse>`.
 
 ```TypeScript
 {
