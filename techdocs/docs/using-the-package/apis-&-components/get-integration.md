@@ -36,7 +36,7 @@ export const getProjectName = async () => {
 
 ### Response Type
 
-The type `GetIntegrationResponse` of `Promise<GetIntegrationResponse>`.
+The type `GetIntegrationResponse` of `Promise<GetIntegrationResponse>`:
 
 ```TypeScript
 {
