@@ -3,6 +3,9 @@
 [![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)](Redirect-URL)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/9acf7410d2019759b52c/maintainability)](https://codeclimate.com/github/bcgov/citz-imb-sso-css-api/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/9acf7410d2019759b52c/test_coverage)](https://codeclimate.com/github/bcgov/citz-imb-sso-css-api/test_coverage)
+
 ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
 [![NodeJS](https://img.shields.io/badge/Node.js_20-43853D?style=for-the-badge&logo=node.js&logoColor=white)](NodeJS)
 [![Typescript](https://img.shields.io/badge/TypeScript_5-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](Typescript)
