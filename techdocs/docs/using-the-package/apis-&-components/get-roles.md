@@ -22,10 +22,9 @@ A basic example of using the `getRoles` function to get an array of role names.
 ```JavaScript
 import { getRoles } from "@bcgov/citz-imb-sso-css-api";
 
-export const getRoleList = async () => {
-  const roles = await getRoles();
-  return roles.data.map((role) => role.name);
-}
+(async () => {
+  console.log(await getRoles().data.map((role) => role.name));
+})();
 ```
 
 ## TypeScript Type

@@ -22,10 +22,9 @@ A basic example of using the `getIntegration` function.
 ```JavaScript
 import { getIntegration } from "@bcgov/citz-imb-sso-css-api";
 
-export const getProjectName = async () => {
-  const integration = await getIntegration();
-  return integration.projectName;
-}
+(async () => {
+  console.log(await getIntegration().projectName);
+})();
 ```
 
 ## TypeScript Type
