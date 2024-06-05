@@ -72,7 +72,7 @@ export const getUsersWithRole = async (
  * @returns No Content.
  * @example unassignUserRole('fohe4m5pn8clhkxmlho33sn1r7vr7m67@idir', 'admin');
  */
-export const unassignUserRole = async (username: string, roleName: string) => {
+export const unassignUserRole = async (username: string, roleName: string): Promise<void> => {
   debug.functionCalled('unassignUserRole');
   return await request({
     integrationEndpoint: true,

@@ -9,16 +9,16 @@ declare const getRoles: () => Promise<RolesArrayResponse>;
 declare const createRole: (roleName: string) => Promise<RoleResponseWithoutComposite>;
 declare const getRole: (roleName: string) => Promise<RoleResponse>;
 declare const updateRole: (roleName: string, newRoleName: string) => Promise<RoleResponseWithoutComposite>;
-declare const deleteRole: (roleName: string) => Promise<any>;
+declare const deleteRole: (roleName: string) => Promise<void>;
 declare const getRoleComposites: (roleName: string) => Promise<RolesArrayResponse>;
 declare const addRoleComposite: (roleName: string, newCompositeRole: string) => Promise<RoleResponseWithoutComposite[]>;
 declare const getRoleComposite: (roleName: string, compositeRoleName: string) => Promise<RoleResponse>;
-declare const deleteRoleComposite: (roleName: string, compositeRoleName: string) => Promise<any>;
+declare const deleteRoleComposite: (roleName: string, compositeRoleName: string) => Promise<void>;
 
 declare const getUserRoles: (username: string) => Promise<RolesArrayResponse>;
 declare const assignUserRoles: (username: string, roleNames: string[]) => Promise<RolesArrayWithoutCompositeResponse>;
 declare const getUsersWithRole: (roleName: string, page?: number, maxCount?: number) => Promise<GetUsersWithRoleResponse>;
-declare const unassignUserRole: (username: string, roleName: string) => Promise<any>;
+declare const unassignUserRole: (username: string, roleName: string) => Promise<void>;
 
 declare const getIDIRUsers: (query: IDIRUserQuery) => Promise<GetUsersWithRoleResponse>;
 declare const getAzureIDIRUsers: (query: IDIRUserQuery) => Promise<GetUsersWithRoleResponse>;
