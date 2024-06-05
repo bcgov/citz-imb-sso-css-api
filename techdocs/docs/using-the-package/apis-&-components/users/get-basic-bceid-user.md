@@ -1,6 +1,6 @@
-# getBothBCeIDUser
+# getBasicBCeIDUser
 
-The `getBothBCeIDUser` function is used to get a Basic or Business BCeID user from your integration in Common Hosted Single Sign-on service.
+The `getBasicBCeIDUser` function is used to get a Basic BCeID user from your integration in Common Hosted Single Sign-on service.
 
 !!! warning "Reminder"
     This function is asynchronous and must be awaited in order to get a response.
@@ -9,21 +9,21 @@ The `getBothBCeIDUser` function is used to get a Basic or Business BCeID user fr
 
 ```JavaScript
 // ESModule Syntax (preferred)
-import { getBothBCeIDUser } from "@bcgov/citz-imb-sso-css-api";
+import { getBasicBCeIDUser } from "@bcgov/citz-imb-sso-css-api";
 
 // CommonJS Syntax
-const { getBothBCeIDUser } = require('@bcgov/citz-imb-sso-css-api');
+const { getBasicBCeIDUser } = require('@bcgov/citz-imb-sso-css-api');
 ```
 
 ## Usage
 
-A basic example of using the `getBothBCeIDUser` function.
+A basic example of using the `getBasicBCeIDUser` function.
 
 ```JavaScript
-import { getBothBCeIDUser } from "@bcgov/citz-imb-sso-css-api";
+import { getBasicBCeIDUser } from "@bcgov/citz-imb-sso-css-api";
 
 (async () => {
-  console.log(await getBothBCeIDUser('1r1zui4qr1yfh73k6rku5q30qupgcvdt'));
+  console.log(await getBasicBCeIDUser('1r1zui4qr1yfh73k6rku5q30qupgcvdt'));
 })();
 ```
 
@@ -57,9 +57,10 @@ The type `UserResponse`:
 
 ## Parameters
 
-An API reference for the parameters of the `getBothBCeIDUser` function.
+An API reference for the parameters of the `getBasicBCeIDUser` function.
 
-The Name column starting with `*` means the prop is required.
+!!! note "Note"
+    The Name column starting with `*` means the prop is required.
 
 <table>
   <!-- Table columns -->

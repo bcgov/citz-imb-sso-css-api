@@ -1,6 +1,6 @@
-# getGitHubBCGovUsers
+# getBothBCeIDUser
 
-The `getGitHubBCGovUsers` function is used to get GitHub users in the bcgov org based on a query from your integration in Common Hosted Single Sign-on service.
+The `getBothBCeIDUser` function is used to get a Basic or Business BCeID user from your integration in Common Hosted Single Sign-on service.
 
 !!! warning "Reminder"
     This function is asynchronous and must be awaited in order to get a response.
@@ -9,41 +9,28 @@ The `getGitHubBCGovUsers` function is used to get GitHub users in the bcgov org 
 
 ```JavaScript
 // ESModule Syntax (preferred)
-import { getGitHubBCGovUsers } from "@bcgov/citz-imb-sso-css-api";
+import { getBothBCeIDUser } from "@bcgov/citz-imb-sso-css-api";
 
 // CommonJS Syntax
-const { getGitHubBCGovUsers } = require('@bcgov/citz-imb-sso-css-api');
+const { getBothBCeIDUser } = require('@bcgov/citz-imb-sso-css-api');
 ```
 
 ## Usage
 
-A basic example of using the `getGitHubBCGovUsers` function.
+A basic example of using the `getBothBCeIDUser` function.
 
 ```JavaScript
-import { getGitHubBCGovUsers } from "@bcgov/citz-imb-sso-css-api";
+import { getBothBCeIDUser } from "@bcgov/citz-imb-sso-css-api";
 
 (async () => {
-  console.log(await getGitHubBCGovUsers({ name: 'JohnDoe' }));
+  console.log(await getBothBCeIDUser('1r1zui4qr1yfh73k6rku5q30qupgcvdt'));
 })();
 ```
 
 ## TypeScript Type
 
 ```TypeScript
-(query: GitHubUserQuery) => Promise<GetUsersWithRoleResponse>;
-```
-
-The type `GitHubUserQuery`:
-
-* At least one of the following properties are required.
-
-```TypeScript
-{
-    name?: string;
-    login?: string;
-    email?: string;
-    guid?: string;
-}
+(guid: string) => Promise<GetUsersWithRoleResponse>;
 ```
 
 ### Response Type
@@ -70,9 +57,10 @@ The type `UserResponse`:
 
 ## Parameters
 
-An API reference for the parameters of the `getGitHubBCGovUsers` function.
+An API reference for the parameters of the `getBothBCeIDUser` function.
 
-The Name column starting with `*` means the prop is required.
+!!! note "Note"
+    The Name column starting with `*` means the prop is required.
 
 <table>
   <!-- Table columns -->
@@ -88,10 +76,10 @@ The Name column starting with `*` means the prop is required.
   <!-- Table rows -->
   <tbody>
     <tr>
-      <td>* query</td>
-      <td>GitHubUserQuery</td>
+      <td>* guid</td>
+      <td>string</td>
       <td>-</td>
-      <td>The user attributes to search for.</td>
+      <td>The guid of the user to search for.</td>
     </tr>
   </tbody>
 </table>

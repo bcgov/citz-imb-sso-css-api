@@ -1,6 +1,6 @@
-# getBusinessBCeIDUser
+# getIDIRUsers
 
-The `getBusinessBCeIDUser` function is used to get a Business BCeID user from your integration in Common Hosted Single Sign-on service.
+The `getIDIRUsers` function is used to get IDIR users based on a query from your integration in Common Hosted Single Sign-on service.
 
 !!! warning "Reminder"
     This function is asynchronous and must be awaited in order to get a response.
@@ -9,28 +9,42 @@ The `getBusinessBCeIDUser` function is used to get a Business BCeID user from yo
 
 ```JavaScript
 // ESModule Syntax (preferred)
-import { getBusinessBCeIDUser } from "@bcgov/citz-imb-sso-css-api";
+import { getIDIRUsers } from "@bcgov/citz-imb-sso-css-api";
 
 // CommonJS Syntax
-const { getBusinessBCeIDUser } = require('@bcgov/citz-imb-sso-css-api');
+const { getIDIRUsers } = require('@bcgov/citz-imb-sso-css-api');
 ```
 
 ## Usage
 
-A basic example of using the `getBusinessBCeIDUser` function.
+A basic example of using the `getIDIRUsers` function.
 
 ```JavaScript
-import { getBusinessBCeIDUser } from "@bcgov/citz-imb-sso-css-api";
+import { getIDIRUsers } from "@bcgov/citz-imb-sso-css-api";
 
 (async () => {
-  console.log(await getBusinessBCeIDUser('1r1zui4qr1yfh73k6rku5q30qupgcvdt'));
+  console.log(await getIDIRUsers({ firstName: 'John' }));
 })();
 ```
 
 ## TypeScript Type
 
 ```TypeScript
-(guid: string) => Promise<GetUsersWithRoleResponse>;
+(query: IDIRUserQuery) => Promise<GetUsersWithRoleResponse>;
+```
+
+The type `IDIRUserQuery`:
+
+!!! warning "Warning"
+    At least one of the following properties are required.
+
+```TypeScript
+{
+    firstName?: string;
+    lastName?: string;
+    email?: string;
+    guid?: string;
+}
 ```
 
 ### Response Type
@@ -57,9 +71,10 @@ The type `UserResponse`:
 
 ## Parameters
 
-An API reference for the parameters of the `getBusinessBCeIDUser` function.
+An API reference for the parameters of the `getIDIRUsers` function.
 
-The Name column starting with `*` means the prop is required.
+!!! note "Note"
+    The Name column starting with `*` means the prop is required.
 
 <table>
   <!-- Table columns -->
@@ -75,10 +90,10 @@ The Name column starting with `*` means the prop is required.
   <!-- Table rows -->
   <tbody>
     <tr>
-      <td>* guid</td>
-      <td>string</td>
+      <td>* query</td>
+      <td>IDIRUserQuery</td>
       <td>-</td>
-      <td>The guid of the user to search for.</td>
+      <td>The user attributes to search for.</td>
     </tr>
   </tbody>
 </table>

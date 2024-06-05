@@ -60,7 +60,8 @@ The type `UserResponse`:
 
 An API reference for the parameters of the `getUsersWithRole` function.
 
-The Name column starting with `*` means the prop is required.
+!!! note "Note"
+    The Name column starting with `*` means the prop is required.
 
 <table>
   <!-- Table columns -->

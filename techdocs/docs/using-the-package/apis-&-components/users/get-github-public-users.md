@@ -35,7 +35,8 @@ import { getGitHubPublicUsers } from "@bcgov/citz-imb-sso-css-api";
 
 The type `GitHubUserQuery`:
 
-* At least one of the following properties are required.
+!!! warning "Warning"
+    At least one of the following properties are required.
 
 ```TypeScript
 {
@@ -72,7 +73,8 @@ The type `UserResponse`:
 
 An API reference for the parameters of the `getGitHubPublicUsers` function.
 
-The Name column starting with `*` means the prop is required.
+!!! note "Note"
+    The Name column starting with `*` means the prop is required.
 
 <table>
   <!-- Table columns -->

@@ -37,7 +37,8 @@ import { unassignUserRole } from "@bcgov/citz-imb-sso-css-api";
 
 An API reference for the parameters of the `unassignUserRole` function.
 
-The Name column starting with `*` means the prop is required.
+!!! note "Note"
+    The Name column starting with `*` means the prop is required.
 
 <table>
   <!-- Table columns -->
