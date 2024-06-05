@@ -35,7 +35,7 @@ import { getAzureIDIRUsers } from "@bcgov/citz-imb-sso-css-api";
 
 The type `IDIRUserQuery`:
 
-* At least one property is required.
+* At least one of the following properties are required.
 
 ```TypeScript
 {
