@@ -51,7 +51,7 @@ The type `RoleResponse` of `Promise<RoleResponse>`:
 An API reference for the parameters of the `getRoleComposite` function.
 
 !!! note "Note"
-    The Name column starting with `*` means the prop is required.
+    The Name column starting with `*` means the parameter is required.
 
 <table>
   <!-- Table columns -->

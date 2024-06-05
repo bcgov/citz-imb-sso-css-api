@@ -35,9 +35,6 @@ import { getGitHubPublicUsers } from "@bcgov/citz-imb-sso-css-api";
 
 The type `GitHubUserQuery`:
 
-!!! warning "Warning"
-    At least one of the following properties are required.
-
 ```TypeScript
 {
     name?: string;
@@ -46,6 +43,9 @@ The type `GitHubUserQuery`:
     guid?: string;
 }
 ```
+
+!!! warning "Warning"
+    At least one of the above properties is required.
 
 ### Response Type
 
@@ -74,7 +74,7 @@ The type `UserResponse`:
 An API reference for the parameters of the `getGitHubPublicUsers` function.
 
 !!! note "Note"
-    The Name column starting with `*` means the prop is required.
+    The Name column starting with `*` means the parameter is required.
 
 <table>
   <!-- Table columns -->

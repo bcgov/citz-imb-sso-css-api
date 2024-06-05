@@ -48,7 +48,7 @@ The type `RoleResponseWithoutComposite` of `Promise<RoleResponseWithoutComposite
 An API reference for the parameters of the `createRole` function.
 
 !!! note "Note"
-    The Name column starting with `*` means the prop is required.
+    The Name column starting with `*` means the parameter is required.
 
 <table>
   <!-- Table columns -->
