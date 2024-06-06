@@ -35,6 +35,8 @@ import { getAzureIDIRUsers } from "@bcgov/citz-imb-sso-css-api";
 
 The type `IDIRUserQuery`:
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: IDIRUserQuery -->
 ```TypeScript
 {
     firstName?: string;
@@ -51,6 +53,8 @@ The type `IDIRUserQuery`:
 
 The type `GetUsersWithRoleResponse` of `Promise<GetUsersWithRoleResponse>`:
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: GetUsersWithRoleResponse -->
 ```TypeScript
 {
     data: UserResponse[];
@@ -59,6 +63,8 @@ The type `GetUsersWithRoleResponse` of `Promise<GetUsersWithRoleResponse>`:
 
 The type `UserResponse`:
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: UserResponse -->
 ```TypeScript
 {
     username: string;

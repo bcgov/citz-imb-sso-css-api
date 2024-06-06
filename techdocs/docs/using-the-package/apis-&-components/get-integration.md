@@ -29,6 +29,8 @@ import { getIntegration } from "@bcgov/citz-imb-sso-css-api";
 
 ## TypeScript Type
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: getIntegration -->
 ```TypeScript
 () => Promise<GetIntegrationResponse>;
 ```
@@ -37,6 +39,8 @@ import { getIntegration } from "@bcgov/citz-imb-sso-css-api";
 
 The type `GetIntegrationResponse` of `Promise<GetIntegrationResponse>`:
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: GetIntegrationResponse -->
 ```TypeScript
 {
     id: number;

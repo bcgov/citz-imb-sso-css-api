@@ -31,6 +31,8 @@ import { deleteRoleComposite } from "@bcgov/citz-imb-sso-css-api";
 
 ## TypeScript Type
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: deleteRoleComposite -->
 ```TypeScript
 (roleName: string, compositeRoleName: string) => Promise<void>
 ```

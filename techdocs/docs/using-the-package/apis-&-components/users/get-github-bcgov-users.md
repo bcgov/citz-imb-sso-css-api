@@ -29,12 +29,16 @@ import { getGitHubBCGovUsers } from "@bcgov/citz-imb-sso-css-api";
 
 ## TypeScript Type
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: getGitHubBCGovUsers -->
 ```TypeScript
 (query: GitHubUserQuery) => Promise<GetUsersWithRoleResponse>;
 ```
 
 The type `GitHubUserQuery`:
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: GitHubUserQuery -->
 ```TypeScript
 {
     name?: string;
@@ -51,6 +55,8 @@ The type `GitHubUserQuery`:
 
 The type `GetUsersWithRoleResponse` of `Promise<GetUsersWithRoleResponse>`:
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: GetUsersWithRoleResponse -->
 ```TypeScript
 {
     data: UserResponse[];
@@ -59,6 +65,8 @@ The type `GetUsersWithRoleResponse` of `Promise<GetUsersWithRoleResponse>`:
 
 The type `UserResponse`:
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: UserResponse -->
 ```TypeScript
 {
     username: string;

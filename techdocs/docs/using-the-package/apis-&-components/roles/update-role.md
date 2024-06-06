@@ -29,6 +29,8 @@ import { updateRole } from "@bcgov/citz-imb-sso-css-api";
 
 ## TypeScript Type
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: updateRole -->
 ```TypeScript
 (roleName: string, newRoleName: string) => Promise<RoleResponseWithoutComposite>;
 ```
@@ -37,6 +39,8 @@ import { updateRole } from "@bcgov/citz-imb-sso-css-api";
 
 The type `RoleResponseWithoutComposite` of `Promise<RoleResponseWithoutComposite>`:
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: RoleResponseWithoutComposite -->
 ```TypeScript
 {
     name: string;

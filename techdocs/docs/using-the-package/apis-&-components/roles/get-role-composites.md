@@ -31,6 +31,8 @@ import { getRoleComposites } from "@bcgov/citz-imb-sso-css-api";
 
 ## TypeScript Type
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: getRoleComposites -->
 ```TypeScript
 (roleName: string) => Promise<RolesArrayResponse>;
 ```
@@ -39,6 +41,8 @@ import { getRoleComposites } from "@bcgov/citz-imb-sso-css-api";
 
 The type `RolesArrayResponse` of `Promise<RolesArrayResponse>`:
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: RolesArrayResponse -->
 ```TypeScript
 {
     data: RoleResponse[];
@@ -47,6 +51,8 @@ The type `RolesArrayResponse` of `Promise<RolesArrayResponse>`:
 
 The type `RoleResponse`:
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: RoleResponse -->
 ```TypeScript
 {
     name: string;
