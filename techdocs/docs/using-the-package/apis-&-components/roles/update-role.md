@@ -32,7 +32,7 @@ import { updateRole } from "@bcgov/citz-imb-sso-css-api";
 <!-- The following code block is auto generated when types in the package change. -->
 <!-- TYPE: updateRole -->
 ```TypeScript
-(roleName: string, newRoleName: string) => Promise<RoleResponseWithoutComposite>;
+const updateRole: (roleName: string, newRoleName: string) => Promise<RoleResponseWithoutComposite>;
 ```
 
 ### Response Type
@@ -42,7 +42,7 @@ The type `RoleResponseWithoutComposite` of `Promise<RoleResponseWithoutComposite
 <!-- The following code block is auto generated when types in the package change. -->
 <!-- TYPE: RoleResponseWithoutComposite -->
 ```TypeScript
-{
+type RoleResponseWithoutComposite = {
     name: string;
 }
 ```

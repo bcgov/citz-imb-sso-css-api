@@ -32,7 +32,7 @@ import { getIntegration } from "@bcgov/citz-imb-sso-css-api";
 <!-- The following code block is auto generated when types in the package change. -->
 <!-- TYPE: getIntegration -->
 ```TypeScript
-() => Promise<GetIntegrationResponse>;
+const getIntegration: () => Promise<GetIntegrationResponse>;
 ```
 
 ### Response Type
@@ -42,7 +42,7 @@ The type `GetIntegrationResponse` of `Promise<GetIntegrationResponse>`:
 <!-- The following code block is auto generated when types in the package change. -->
 <!-- TYPE: GetIntegrationResponse -->
 ```TypeScript
-{
+type GetIntegrationResponse = {
     id: number;
     projectName: string;
     authType: string;

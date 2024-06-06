@@ -32,7 +32,7 @@ import { getGitHubBCGovUsers } from "@bcgov/citz-imb-sso-css-api";
 <!-- The following code block is auto generated when types in the package change. -->
 <!-- TYPE: getGitHubBCGovUsers -->
 ```TypeScript
-(query: GitHubUserQuery) => Promise<GetUsersWithRoleResponse>;
+const getGitHubBCGovUsers: (query: GitHubUserQuery) => Promise<GetUsersWithRoleResponse>;
 ```
 
 The type `GitHubUserQuery`:
@@ -40,7 +40,7 @@ The type `GitHubUserQuery`:
 <!-- The following code block is auto generated when types in the package change. -->
 <!-- TYPE: GitHubUserQuery -->
 ```TypeScript
-{
+type GitHubUserQuery = {
     name?: string;
     login?: string;
     email?: string;
@@ -58,7 +58,8 @@ The type `GetUsersWithRoleResponse` of `Promise<GetUsersWithRoleResponse>`:
 <!-- The following code block is auto generated when types in the package change. -->
 <!-- TYPE: GetUsersWithRoleResponse -->
 ```TypeScript
-{
+type GetUsersWithRoleResponse = {
+    page?: number;
     data: UserResponse[];
 }
 ```
@@ -68,7 +69,7 @@ The type `UserResponse`:
 <!-- The following code block is auto generated when types in the package change. -->
 <!-- TYPE: UserResponse -->
 ```TypeScript
-{
+type UserResponse = {
     username: string;
     email: string;
     firstName: string;

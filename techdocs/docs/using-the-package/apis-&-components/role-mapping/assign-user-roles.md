@@ -32,7 +32,7 @@ import { assignUserRoles } from "@bcgov/citz-imb-sso-css-api";
 <!-- The following code block is auto generated when types in the package change. -->
 <!-- TYPE: assignUserRoles -->
 ```TypeScript
-(username: string, roleNames: string[]) => Promise<RolesArrayWithoutCompositeResponse>;
+const assignUserRoles: (username: string, roleNames: string[]) => Promise<RolesArrayWithoutCompositeResponse>;
 ```
 
 ### Response Type
@@ -42,7 +42,7 @@ The type `RolesArrayWithoutCompositeResponse` of `Promise<RolesArrayWithoutCompo
 <!-- The following code block is auto generated when types in the package change. -->
 <!-- TYPE: RolesArrayWithoutCompositeResponse -->
 ```TypeScript
-{
+type RolesArrayWithoutCompositeResponse = {
     data: RoleResponseWithoutComposite[];
 }
 ```
@@ -52,7 +52,7 @@ The type `RoleResponseWithoutComposite`:
 <!-- The following code block is auto generated when types in the package change. -->
 <!-- TYPE: RoleResponseWithoutComposite -->
 ```TypeScript
-{
+type RoleResponseWithoutComposite = {
     name: string;
 }
 ```

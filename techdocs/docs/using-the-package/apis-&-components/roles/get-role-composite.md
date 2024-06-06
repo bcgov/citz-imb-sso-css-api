@@ -34,7 +34,7 @@ import { getRoleComposite } from "@bcgov/citz-imb-sso-css-api";
 <!-- The following code block is auto generated when types in the package change. -->
 <!-- TYPE: getRoleComposite -->
 ```TypeScript
-(roleName: string, compositeRoleName: string) => Promise<RoleResponse>
+const getRoleComposite: (roleName: string, compositeRoleName: string) => Promise<RoleResponse>;
 ```
 
 ### Response Type
@@ -44,7 +44,7 @@ The type `RoleResponse` of `Promise<RoleResponse>`:
 <!-- The following code block is auto generated when types in the package change. -->
 <!-- TYPE: RoleResponse -->
 ```TypeScript
-{
+type RoleResponse = {
     name: string;
     composite: boolean;
 }

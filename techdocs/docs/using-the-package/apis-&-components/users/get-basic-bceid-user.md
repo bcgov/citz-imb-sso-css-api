@@ -32,7 +32,7 @@ import { getBasicBCeIDUser } from "@bcgov/citz-imb-sso-css-api";
 <!-- The following code block is auto generated when types in the package change. -->
 <!-- TYPE: getBasicBCeIDUser -->
 ```TypeScript
-(guid: string) => Promise<GetUsersWithRoleResponse>;
+const getBasicBCeIDUser: (guid: string) => Promise<GetUsersWithRoleResponse>;
 ```
 
 ### Response Type
@@ -42,7 +42,8 @@ The type `GetUsersWithRoleResponse` of `Promise<GetUsersWithRoleResponse>`:
 <!-- The following code block is auto generated when types in the package change. -->
 <!-- TYPE: GetUsersWithRoleResponse -->
 ```TypeScript
-{
+type GetUsersWithRoleResponse = {
+    page?: number;
     data: UserResponse[];
 }
 ```
@@ -52,7 +53,7 @@ The type `UserResponse`:
 <!-- The following code block is auto generated when types in the package change. -->
 <!-- TYPE: UserResponse -->
 ```TypeScript
-{
+type UserResponse = {
     username: string;
     email: string;
     firstName: string;

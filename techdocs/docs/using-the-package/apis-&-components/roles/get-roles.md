@@ -32,7 +32,7 @@ import { getRoles } from "@bcgov/citz-imb-sso-css-api";
 <!-- The following code block is auto generated when types in the package change. -->
 <!-- TYPE: getRoles -->
 ```TypeScript
-() => Promise<RolesArrayResponse>;
+const getRoles: () => Promise<RolesArrayResponse>;
 ```
 
 ### Response Type
@@ -42,7 +42,7 @@ The type `RolesArrayResponse` of `Promise<RolesArrayResponse>`:
 <!-- The following code block is auto generated when types in the package change. -->
 <!-- TYPE: RolesArrayResponse -->
 ```TypeScript
-{
+type RolesArrayResponse = {
     data: RoleResponse[];
 }
 ```
@@ -52,7 +52,7 @@ The type `RoleResponse`:
 <!-- The following code block is auto generated when types in the package change. -->
 <!-- TYPE: RoleResponse -->
 ```TypeScript
-{
+type RoleResponse = {
     name: string;
     composite: boolean;
 }
