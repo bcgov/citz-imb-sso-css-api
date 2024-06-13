@@ -29,16 +29,20 @@ import { createRole } from "@bcgov/citz-imb-sso-css-api";
 
 ## TypeScript Type
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: createRole -->
 ```TypeScript
-(roleName: string) => Promise<RoleResponseWithoutComposite>;
+const createRole: (roleName: string) => Promise<RoleResponseWithoutComposite>;
 ```
 
 ### Response Type
 
 The type `RoleResponseWithoutComposite` of `Promise<RoleResponseWithoutComposite>`:
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: RoleResponseWithoutComposite -->
 ```TypeScript
-{
+type RoleResponseWithoutComposite = {
     name: string;
 }
 ```

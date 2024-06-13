@@ -31,16 +31,20 @@ import { addRoleComposite } from "@bcgov/citz-imb-sso-css-api";
 
 ## TypeScript Type
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: addRoleComposite -->
 ```TypeScript
-(roleName: string, newCompositeRole: string) => Promise<RoleResponseWithoutComposite[]>;
+const addRoleComposite: (roleName: string, newCompositeRole: string) => Promise<RoleResponseWithoutComposite[]>;
 ```
 
 ### Response Type
 
 The type `RoleResponseWithoutComposite` of `Promise<RoleResponseWithoutComposite[]>`:
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: RoleResponseWithoutComposite -->
 ```TypeScript
-{
+type RoleResponseWithoutComposite = {
     name: string;
 }
 ```

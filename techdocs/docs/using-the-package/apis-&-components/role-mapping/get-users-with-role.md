@@ -29,16 +29,20 @@ import { getUsersWithRole } from "@bcgov/citz-imb-sso-css-api";
 
 ## TypeScript Type
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: getUsersWithRole -->
 ```TypeScript
-(roleName: string, page?: number, maxCount?: number) => Promise<GetUsersWithRoleResponse>;
+const getUsersWithRole: (roleName: string, page?: number, maxCount?: number) => Promise<GetUsersWithRoleResponse>;
 ```
 
 ### Response Type
 
 The type `GetUsersWithRoleResponse` of `Promise<GetUsersWithRoleResponse>`:
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: GetUsersWithRoleResponse -->
 ```TypeScript
-{
+type GetUsersWithRoleResponse = {
     page?: number;
     data: UserResponse[];
 }
@@ -46,8 +50,10 @@ The type `GetUsersWithRoleResponse` of `Promise<GetUsersWithRoleResponse>`:
 
 The type `UserResponse`:
 
+<!-- The following code block is auto generated when types in the package change. -->
+<!-- TYPE: UserResponse -->
 ```TypeScript
-{
+type UserResponse = {
     username: string;
     email: string;
     firstName: string;
