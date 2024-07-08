@@ -1,6 +1,6 @@
 {
   "name": "@bcgov/citz-imb-sso-css-api",
-  "version": "1.0.0-rc",
+  "version": "1.0.0",
   "description": "BCGov SSO CSS API integration.",
   "author": "CITZ IMB Common Code <citz.codemvp@gov.bc.ca>",
   "license": "Apache-2.0",
