@@ -1,6 +1,6 @@
 # BCGov SSO CSS API Functions
 
-[![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)](Redirect-URL)
+![Deprecated](https://img.shields.io/badge/status-deprecated-red)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/9acf7410d2019759b52c/maintainability)](https://codeclimate.com/github/bcgov/citz-imb-sso-css-api/maintainability)
