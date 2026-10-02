@@ -1,4 +1,8 @@
 # CITZ IMB SSO CSS API (NPM Package)
+
+!!! danger "Deprecated"
+    This package has been deprecated and should not be used for new development.
+    
 <!-- This file is the homepage of your documentation. It is mandatory and must not be deleted. --->
 ## Overview
 
